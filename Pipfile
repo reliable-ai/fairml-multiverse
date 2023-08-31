@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fairlearn = "*"
+scikit-learn = "*"
+papermill = "*"
+folktables = {editable = true, ref = "39a6d5a8382b2e9503480d37390cb270e629836c", git = "https://github.com/jansim/folktables"}
+matplotlib = "*"
+ipywidgets = "*"
+plotly = "*"
+eli5 = "*"
+nbstripout = "*"
+notebook = "*"
+tqdm = "*"
+fanova = "*"
+numpy = "==1.23"
+pandas = "==1.4.4"
+smac = "*"
+pip = "*"
+install = "*"
+configspace = "*"
+fairness-multiverse = {editable = true, path = "./fairness_multiverse"}
+
+[dev-packages]
+ipykernel = "*"
+black = "*"
+
+[requires]
+python_version = "3.8"
