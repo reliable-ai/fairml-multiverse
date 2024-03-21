@@ -14,9 +14,15 @@ To study this issue, we draw on insights from the field of psychology and introd
 
 ## Running the Code
 
-This project uses [Pipenv](https://pipenv.pypa.io/en/latest/) to control the Python environment. To install the dependencies, first install `pipenv` on your machine, then run `pipenv install` in the root directory of the project.
+### Setup
 
-You can run the complete multiverse analysis by running `python multiverse_analysis.py`. By default this will allow you to stop and restart the analysis between different universe runs.
+This project uses [Pipenv](https://pipenv.pypa.io/en/latest/) to control the Python environment. To install the dependencies, first install `pipenv` on your machine, then run `pipenv sync -d` in the root directory of the project. Once set up, you can enter the virtual environment in your command line by running `pipenv shell`.
+
+You can check whether the environment is correctly set up by activating the virtual environment (`pipenv shell`) and running the test cases via `python -m unittest`. This should output the number of tests that were run (these should be more than 0!) and a message that all tests passed (OK).
+
+### Running the Analysis
+
+You can run the complete multiverse analysis by running `python multiverse_analysis.py`. Make sure to activate the virtual environment beforehand, so that the installed dependencies are available. By default this will allow you to stop and restart the analysis between different universe runs.
 
 To explore the individual analyses conducted in each *universe* of the *multiverse*, we recommend examining `universe_analysis.ipynb`. This notebook will be executed many times with different settings for each universe.
 
