@@ -168,3 +168,5 @@ data/
 # For trackdown
 .Renviron
 .trackdown
+
+/test/temp
