@@ -45,6 +45,7 @@ class MultiverseAnalysis:
         output_dir: Path = Path("./output"),
         run_no: Optional[int] = None,
         new_run: bool = True,
+        seed: Optional[int] = 2023,
     ) -> None:
         """
         Initializes a new MultiverseAnalysis instance.
@@ -59,9 +60,11 @@ class MultiverseAnalysis:
             incrementing integer number if new_run is True or the last run if
             new_run is False.
         - new_run: Whether this is a new run or not. Defaults to True.
+        - seed: The seed to use for the analysis.
         """
         self.dimensions = dimensions
         self.output_dir = output_dir
+        self.seed=seed
         self.run_no = (
             run_no if run_no is not None else self.read_counter(increment=new_run)
         )
@@ -231,6 +234,7 @@ class MultiverseAnalysis:
                 "run_no": str(self.run_no),
                 "universe": universe_param_string,
                 "output_dir": str(self.output_dir),
+                "seed": str(self.seed),
             },
         )
 

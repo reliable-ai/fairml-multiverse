@@ -30,6 +30,14 @@ parser.add_argument(
     default="./output",
     type=verify_dir,
 )
+parser.add_argument(
+    "--seed",
+    help=(
+        "The seed to use for the analysis."
+    ),
+    default="2023",
+    type=int,
+)
 args = parser.parse_args()
 
 multiverse_analysis = MultiverseAnalysis(
@@ -80,14 +88,15 @@ multiverse_analysis = MultiverseAnalysis(
         "cutoff": [["raw_0.5", "quantile_0.1", "quantile_0.25"]],
     },
     output_dir=Path(args.output_dir),
-    new_run=(args.mode != "continue")
+    new_run=(args.mode != "continue"),
+    seed=args.seed,
 )
 
 multiverse_grid = multiverse_analysis.generate_grid(save=True)
 print(f"Generated N = {len(multiverse_grid)} universes")
 
 
-print(f"~ Starting Run No. {multiverse_analysis.run_no} ~")
+print(f"~ Starting Run No. {multiverse_analysis.run_no} (Seed: {multiverse_analysis.seed})~")
 
 # Run the analysis for the first universe
 if args.mode == "test":
