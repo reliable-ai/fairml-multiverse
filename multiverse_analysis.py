@@ -1,10 +1,23 @@
+#!/usr/bin/env python
+
+import argparse
 from pathlib import Path
 
 from fairness_multiverse.multiverse import MultiverseAnalysis
 
-# Whether to only explore a small fraction of universes for testing
-TEST_RUN = False
-CONTINUE_RUN = True
+parser = argparse.ArgumentParser("simple_example")
+parser.add_argument(
+    "mode",
+    help=(
+        "How to run the multiverse analysis. "
+        "(continue: continue from previous run, "
+        "full: run all universes, "
+        "test: run only a small subset of universes)"
+    ),
+    choices=["continue", "full", "test"],
+    default="continue",
+)
+args = parser.parse_args()
 
 multiverse_analysis = MultiverseAnalysis(
     dimensions={
@@ -17,8 +30,6 @@ multiverse_analysis = MultiverseAnalysis(
             "both"
         ],
         "model": ["logreg", "rf", "gbm", "elasticnet"],
-        "cutoff": [["raw_0.5", "quantile_0.1", "quantile_0.25"]],
-        "fairness_grouping": [["majority-minority", "race-all"]],
         "preprocess_age": ["none", "bins_10", "quantiles_3", "quantiles_4"],
         "preprocess_income": ["none", "bins_10000", "quantiles_3", "quantiles_4"],
         "exclude_features": [
@@ -35,9 +46,28 @@ multiverse_analysis = MultiverseAnalysis(
             "keep-largest_race_2",
             "drop-name_race_Some Other Race alone",
         ],
+        # Evaluation
+        "eval_fairness_grouping": [["majority-minority", "race-all"]],
+        "eval_exclude_subgroups": [["exclude-in-eval", "keep-in-eval"]],
+        "eval_on_subset": [[
+            "full",
+            # Largest PUMA region
+            "locality-largest-only",
+            # PUMA region w/ highest share of white people
+            "locality-whitest-only",
+            # PUMA regions belonging to a large city
+            "locality-city-la",
+            "locality-city-sf",
+            # Exclude military personnel from test dataset
+            "exclude-military",
+            # Exclude non US citizens from test dataset
+            "exclude-non-citizens",
+        ]],
+        # Post-Deployment
+        "cutoff": [["raw_0.5", "quantile_0.1", "quantile_0.25"]],
     },
     output_dir=Path("./output"),
-    new_run=not CONTINUE_RUN
+    new_run=(args.mode != "continue")
 )
 
 multiverse_grid = multiverse_analysis.generate_grid(save=True)
@@ -47,11 +77,11 @@ print(f"Generated N = {len(multiverse_grid)} universes")
 print(f"~ Starting Run No. {multiverse_analysis.run_no} ~")
 
 # Run the analysis for the first universe
-if TEST_RUN:
+if args.mode == "test":
     print("Small-Scale-Test Run")
     multiverse_analysis.visit_universe(multiverse_grid[0])
     multiverse_analysis.visit_universe(multiverse_grid[1])
-elif CONTINUE_RUN:
+elif args.mode == "continue":
     print("Continuing Previous Run")
     missing_universes = multiverse_analysis.check_missing_universes()[
         "missing_universes"

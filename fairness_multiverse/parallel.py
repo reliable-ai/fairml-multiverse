@@ -1,3 +1,8 @@
+"""
+This module contains a small helper functions to parallelize the execution of
+universes in a multiverse analysis.
+"""
+
 import contextlib
 import joblib
 from tqdm import tqdm

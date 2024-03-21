@@ -1,33 +1,50 @@
+"""This module contains helpers for running the individual universes within
+a multiverse analysis.
+"""
+
 from pathlib import Path
 import time
 from math import floor, ceil
 import pandas as pd
 import json
-import time
 import numpy as np
-import pandas as pd
 from typing import Dict, List, Optional, Any, Tuple
 from sklearn.pipeline import make_pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import FunctionTransformer, KBinsDiscretizer
 from fairlearn.metrics import MetricFrame
-from sklearn.metrics import accuracy_score, precision_score
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    balanced_accuracy_score,
+    f1_score
+)
 from fairlearn.metrics import (
     false_positive_rate,
     false_negative_rate,
     selection_rate,
-    count,
+    count
 )
 from fairlearn.metrics import (
-    demographic_parity_difference,
-    demographic_parity_ratio,
     equalized_odds_difference,
     equalized_odds_ratio,
+    demographic_parity_difference,
+    demographic_parity_ratio,
+
 )
 from .multiverse import generate_multiverse_grid
 
 
-def list_wrap(value: Any):
+def list_wrap(value: Any) -> List[Any]:
+    """Wrap a value in a List if it is not already a list.
+
+    Args:
+        value: Any sort of value.
+
+    Returns:
+        List[Any]: A list containing the value. If the value is already a list,
+            the value is returned unchanged.
+    """
     if isinstance(value, list):
         return value
     else:
@@ -35,7 +52,7 @@ def list_wrap(value: Any):
 
 
 # Modified version of pandas.cut, that also supports DataFrames instead of just Series
-def cut_df(df, **kwargs):
+def cut_df(df, **kwargs) -> pd.DataFrame:
     # Adapted from https://datascience.stackexchange.com/questions/75787/how-to-use-columntransformer-and-functiontransformer-to-apply-the-same-function
     if isinstance(df, pd.Series):
         return pd.cut(df, **kwargs)
@@ -52,6 +69,17 @@ def continuous_var_will_be_binned(configuration: str):
 def preprocess_continuous(
     source_data: pd.DataFrame, column_name: str, configuration: str
 ) -> Tuple[Optional[ColumnTransformer], Optional[List[str]]]:
+    """Preprocess a continuous variable.
+
+    Args:
+        source_data: The source data containing the variable to be
+            preprocessed.
+        column_name: The name of the column to be preprocessed.
+
+    Returns:
+        A tuple containing the ColumnTransformer to be used for preprocessing
+        and the list of binned values (if applicable).
+    """
     if configuration == "none":
         # Skip transformation if "none" is specified
         return (None, None)
@@ -107,7 +135,18 @@ def preprocess_continuous(
     return (column_transformer, binned_values)
 
 
-def predict_w_threshold(probabilities: np.array, threshold: float):
+def predict_w_threshold(probabilities: np.array, threshold: float) -> np.array:
+    """
+    Create binary predictions from probabilities using a custom threshold.
+
+    Args:
+        probabilities: A numpy array containing the probabilities for each class.
+        threshold: The threshold to use for the predictions.
+
+    Returns:
+        A numpy array containing the binary predictions.
+    """
+
     # Expect 2 classes
     assert probabilities.shape[1] == 2
 
@@ -115,13 +154,34 @@ def predict_w_threshold(probabilities: np.array, threshold: float):
     return probabilities[:, 1] >= threshold
 
 
-def add_dict_to_df(df, dictionary, prefix=""):
+def add_dict_to_df(df: pd.DataFrame, dictionary: dict, prefix="") -> pd.DataFrame:
+    """Add values from a dictionary as columns to a dataframe.
+
+    Args:
+        df: The dataframe to which the columns should be added.
+        dictionary: The dictionary containing the values to be added.
+        prefix: A prefix to be added to the column names. (optional)
+
+    Returns:
+        The dataframe with the added columns.
+    """
     for key, value in dictionary.items():
         df[prefix + key] = value
     return df
 
 
-def flatten_dict(d, parent_key="", sep="_"):
+def flatten_dict(d: dict, parent_key="", sep="_") -> dict:
+    """Flatten a nested dictionary.
+
+    Args:
+        d: The dictionary to be flattened.
+        parent_key: The parent key to be used for the flattened keys.
+            (optional)
+        sep: The separator to be used for the flattened keys. (optional)
+
+    Returns:
+        The flattened dictionary.
+    """
     items = []
     for k, v in d.items():
         new_key = f"{parent_key}{sep}{k}" if parent_key else k
@@ -136,8 +196,25 @@ def flatten_dict(d, parent_key="", sep="_"):
 
 
 class UniverseAnalysis:
+    """A class to help with running the analysis of a single universe contained
+        within a multiverse analysis.
+
+    Attributes:
+        run_no: The run number of the multiverse analysis.
+        universe_id: The id of the universe.
+        universe: The universe settings.
+        output_dir: The directory to which the output should be written.
+        metrics: A dictionary containing the metrics to be computed.
+        fairness_metrics: A dictionary containing the fairness metrics to be
+            computed.
+        ts_start: The timestamp of the start of the analysis.
+        ts_end: The timestamp of the end of the analysis.
+    """
+
     metrics = {
         "accuracy": accuracy_score,
+        "balanced accuracy": balanced_accuracy_score,
+        "f1": f1_score,
         "precision": precision_score,
         "false positive rate": false_positive_rate,
         "false negative rate": false_negative_rate,
@@ -148,8 +225,8 @@ class UniverseAnalysis:
     fairness_metrics = {
         "equalized_odds_difference": equalized_odds_difference,
         "equalized_odds_ratio": equalized_odds_ratio,
-        # "demographic_parity_difference": demographic_parity_difference,
-        # "demographic_parity_ratio": demographic_parity_ratio,
+        "demographic_parity_difference": demographic_parity_difference,
+        "demographic_parity_ratio": demographic_parity_ratio,
     }
     ts_start = None
     ts_end = None
@@ -161,6 +238,17 @@ class UniverseAnalysis:
         universe: Dict,
         output_dir: Path = Path("./output"),
     ) -> None:
+        """
+        Initialize the UniverseAnalysis class.
+
+        The arguments should be passed in from the larger multiverse analysis.
+
+        Args:
+            run_no: The run number of the multiverse analysis.
+            universe_id: The id of the universe.
+            universe: The universe settings.
+            output_dir: The directory to which the output should be written.
+        """
         self.ts_start = time.time()
 
         self.run_no = run_no
@@ -169,7 +257,13 @@ class UniverseAnalysis:
 
         self.output_dir = output_dir
 
-    def get_execution_time(self):
+    def get_execution_time(self) -> float:
+        """
+        Gets the execution time of the universe analysis.
+
+        Returns:
+            float: The execution time in seconds.
+        """
         if self.ts_end is None:
             print("Stopping execution_time clock.")
             self.ts_end = time.time()
@@ -180,8 +274,24 @@ class UniverseAnalysis:
         sub_universe: Dict,
         y_pred_prob: pd.Series,
         y_test: pd.Series,
-        x_test: pd.DataFrame,
-    ):
+        org_test: pd.DataFrame,
+    ) -> Tuple[dict, dict]:
+        """
+        Computes a set of metrics for a given sub-universe.
+
+        Args:
+            sub_universe: A dictionary containing the parameters for the
+                sub-universe.
+            y_pred_prob: A pandas series containing the predicted
+                probabilities.
+            y_test: A pandas series containing the true labels.
+            org_test: A pandas dataframe containing the test data, including
+                variables that were not used as features.
+
+        Returns:
+            A tuple containing two dicst: explicit fairness metrics and
+                performance metrics split by fairness groups.
+        """
         # Determine cutoff for predictions
         cutoff_type, cutoff_value = sub_universe["cutoff"].split("_")
         cutoff_value = float(cutoff_value)
@@ -192,7 +302,7 @@ class UniverseAnalysis:
             probabilities_true = y_pred_prob[:, 1]
             threshold = np.quantile(probabilities_true, cutoff_value)
 
-        fairness_grouping = sub_universe["fairness_grouping"]
+        fairness_grouping = sub_universe["eval_fairness_grouping"]
         if fairness_grouping == "majority-minority":
             fairness_group_column = "majmin"
         elif fairness_grouping == "race-all":
@@ -205,7 +315,7 @@ class UniverseAnalysis:
             name: metric(
                 y_true=y_test,
                 y_pred=y_pred,
-                sensitive_features=x_test[fairness_group_column],
+                sensitive_features=org_test[fairness_group_column],
             )
             for name, metric in self.fairness_metrics.items()
         }
@@ -215,12 +325,38 @@ class UniverseAnalysis:
             metrics=self.metrics,
             y_true=y_test,
             y_pred=y_pred,
-            sensitive_features=x_test[fairness_group_column],
+            sensitive_features=org_test[fairness_group_column],
         )
 
         return (fairness_dict, metric_frame)
 
-    def visit_sub_universe(self, sub_universe, y_pred_prob, y_test, x_test):
+    def visit_sub_universe(
+        self, sub_universe, y_pred_prob, y_test, org_test, filter_data
+    ) -> pd.DataFrame:
+        """
+        Visit a sub-universe and compute the metrics for it.
+
+        Sub-universes correspond to theoretically distinct universes of
+        decisions, which can be computed without re-fitting a model. The
+        distinction has only been made to improve performance by not having to
+        compute these universes from scratch.
+
+        Args:
+            sub_universe: A dictionary containing the parameters for the
+                sub-universe.
+            y_pred_prob: A pandas series containing the predicted
+                probabilities.
+            y_test: A pandas series containing the true labels.
+            org_test: A pandas dataframe containing the test data, including
+                variables that were not used as features.
+            filter_data: A function that filters data for each sub-universe.
+                The function is called for each sub-universe with its
+                respective settings and expected to return a pandas Series
+                of booleans.
+
+        Returns:
+            A pandas dataframe containing the metrics for the sub-universe.
+        """
         final_output = pd.DataFrame(
             data={
                 "run_no": self.run_no,
@@ -231,12 +367,19 @@ class UniverseAnalysis:
             index=[self.universe_id],
         )
 
+        data_mask = filter_data(
+            sub_universe=sub_universe,
+            org_test=org_test
+        )
+        final_output["test_size_n"] = data_mask.sum()
+        final_output["test_size_frac"] = data_mask.sum() / len(data_mask)
+
         # Compute metrics for majority-minority split
         fairness_dict, metric_frame = self.compute_metrics(
             sub_universe,
-            y_pred_prob,
-            y_test,
-            x_test,
+            y_pred_prob[data_mask],
+            y_test[data_mask],
+            org_test[data_mask],
         )
 
         # Add main fairness metrics to final_output
@@ -252,14 +395,40 @@ class UniverseAnalysis:
 
         return final_output
 
-    def generate_sub_universes(self):
+    def generate_sub_universes(self) -> List[dict]:
+        """
+        Generate the sub-universes for the given universe settings.
+
+        Returns:
+            A list of dictionaries containing the sub-universes.
+        """
         # Wrap all non-lists in the universe to make them work with generate_multiverse_grid
         universe_all_lists = {k: list_wrap(v) for k, v in self.universe.items()}
 
         # Within-Universe variation
         return generate_multiverse_grid(universe_all_lists)
 
-    def generate_final_output(self, y_pred_prob, y_test, x_test, save=True):
+    def generate_final_output(
+        self, y_pred_prob, y_test, org_test, filter_data, save=True
+    ) -> pd.DataFrame:
+        """
+        Generate the final output for the given universe settings.
+
+        Args:
+            y_pred_prob: A pandas series containing the predicted
+                probabilities.
+            y_test: A pandas series containing the true labels.
+            org_test: A pandas dataframe containing the test data, including
+                variables that were not used as features.
+            filter_data: A function that filters data for each sub-universe.
+                The function is called for each sub-universe with its
+                respective settings and expected to return a pandas Series
+                of booleans.
+            save: Whether to save the output to a file. (optional)
+
+        Returns:
+            A pandas dataframe containing the final output.
+        """
         # Within-Universe variation
         sub_universes = self.generate_sub_universes()
 
@@ -270,7 +439,8 @@ class UniverseAnalysis:
                     sub_universe=sub_universe,
                     y_pred_prob=y_pred_prob,
                     y_test=y_test,
-                    x_test=x_test,
+                    org_test=org_test,
+                    filter_data=filter_data,
                 ).reset_index(drop=True)
             )
         final_output = pd.concat(final_outputs)
