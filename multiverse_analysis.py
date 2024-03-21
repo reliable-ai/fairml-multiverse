@@ -5,9 +5,9 @@ from pathlib import Path
 
 from fairness_multiverse.multiverse import MultiverseAnalysis
 
-parser = argparse.ArgumentParser("simple_example")
+parser = argparse.ArgumentParser("multiverse_analysis")
 parser.add_argument(
-    "mode",
+    "--mode",
     help=(
         "How to run the multiverse analysis. "
         "(continue: continue from previous run, "
@@ -16,6 +16,19 @@ parser.add_argument(
     ),
     choices=["continue", "full", "test"],
     default="continue",
+)
+def verify_dir(string):
+    if Path(string).is_dir():
+        return string
+    else:
+        raise NotADirectoryError(string)
+parser.add_argument(
+    "--output-dir",
+    help=(
+        "Relative path to output directory for the results."
+    ),
+    default="./output",
+    type=verify_dir,
 )
 args = parser.parse_args()
 
@@ -66,7 +79,7 @@ multiverse_analysis = MultiverseAnalysis(
         # Post-Deployment
         "cutoff": [["raw_0.5", "quantile_0.1", "quantile_0.25"]],
     },
-    output_dir=Path("./output"),
+    output_dir=Path(args.output_dir),
     new_run=(args.mode != "continue")
 )
 

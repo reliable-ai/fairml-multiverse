@@ -230,6 +230,7 @@ class MultiverseAnalysis:
                 "universe_id": universe_id,
                 "run_no": str(self.run_no),
                 "universe": universe_param_string,
+                "output_dir": str(self.output_dir),
             },
         )
 

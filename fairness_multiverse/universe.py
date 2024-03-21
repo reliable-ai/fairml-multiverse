@@ -236,7 +236,7 @@ class UniverseAnalysis:
         run_no: int,
         universe_id: str,
         universe: Dict,
-        output_dir: Path = Path("./output"),
+        output_dir: str,
     ) -> None:
         """
         Initialize the UniverseAnalysis class.
@@ -255,7 +255,7 @@ class UniverseAnalysis:
         self.universe_id = universe_id
         self.universe = universe
 
-        self.output_dir = output_dir
+        self.output_dir = Path(output_dir)
 
     def get_execution_time(self) -> float:
         """
