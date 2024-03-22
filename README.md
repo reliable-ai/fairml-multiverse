@@ -41,13 +41,13 @@ To make it easier to run the code and for the sake of long term reproducibility,
 To build the container image, run the following command in the root directory of the project:
 
 ```bash
-docker build -t multiverse-analysis .
+docker build -t fairml-multiverse .
 ```
 
 To check whether the image is built correctly, you can run the following command to run the test case within the container.
 
 ```bash
-docker run --rm multiverse-analysis pipenv run python -m unittest
+docker run --rm fairml-multiverse pipenv run python -m unittest
 ```
 
 ### Running the Analysis
@@ -55,7 +55,7 @@ docker run --rm multiverse-analysis pipenv run python -m unittest
 To run the multiverse analysis within the container, you can run the following command:
 
 ```bash
-docker run --rm -v $(pwd)/output:/app/output multiverse-analysis
+docker run --rm -v $(pwd)/output:/app/output fairml-multiverse
 ```
 
 ## License
