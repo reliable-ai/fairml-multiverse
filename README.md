@@ -46,6 +46,12 @@ To run the multiverse analysis within our prebuilt container, you can run the fo
 docker run --rm -v $(pwd)/output:/app/output ghcr.io/reliable-ai/fairml-multiverse
 ```
 
+If you want to verify first whether the basic execution of the analysis works, by test running a few universes, you can run the following command. We definitely recommend doing this before running the whole analysis.
+
+```bash
+docker run --rm ghcr.io/reliable-ai/fairml-multiverse pipenv run python -m unittest
+```
+
 ### Building
 
 To build the container image, run the following command in the root directory of the project:
