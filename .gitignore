@@ -159,7 +159,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-data/
+# Ignore large ACS PUMS data files
+data/**/psam_p*.csv
 
 /.quarto/
 .Rproj.user

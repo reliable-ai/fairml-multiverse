@@ -3,7 +3,9 @@
 misc/
 paper/
 output/
-data
 
 __pycache__/
 *.egg-info
+
+# Ignore large ACS PUMS data files
+data/**/psam_p*.csv
