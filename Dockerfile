@@ -24,4 +24,4 @@ RUN pipenv sync -d
 ENV SEED 2023
 
 # Run multiverse_analysis.py when the container launches, passing the seed as an argument
-CMD ["python", "multiverse_analysis.py", "--seed", "$SEED"]
+CMD ["pipenv", "run", "python", "multiverse_analysis.py", "--seed", "$SEED"]
