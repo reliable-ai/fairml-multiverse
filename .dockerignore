@@ -1,0 +1,9 @@
+.git
+.vscode
+misc/
+paper/
+output/
+data
+
+__pycache__/
+*.egg-info

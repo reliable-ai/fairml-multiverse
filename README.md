@@ -32,4 +32,28 @@ The different Jupyter notebooks prefixed with `analysis` are analyzing the gener
 
 The generated data from the different analyses is located in the `output` directory. Raw data from the different *universes* can be found under `output/runs/`, raw data from the analyses e.g. the FANOVAs can be found under `output/analyses/`.
 
+## Container Image 📦️
 
+To make it easier to run the code and for the sake of long term reproducibility, we provide a container image that contains all the necessary dependencies. The container image is built using [Docker](https://www.docker.com/), using it with [Podman](https://podman.io/) is most likely also possible, but not yet tested.
+
+### Building
+
+To build the container image, run the following command in the root directory of the project:
+
+```bash
+docker build -t multiverse-analysis .
+```
+
+To check whether the image is built correctly, you can run the following command to run the test case within the container.
+
+```bash
+docker run --rm multiverse-analysis pipenv run python -m unittest
+```
+
+### Running the Analysis
+
+To run the multiverse analysis within the container, you can run the following command:
+
+```bash
+docker run --rm -v $(pwd)/output:/app/output multiverse-analysis
+```
