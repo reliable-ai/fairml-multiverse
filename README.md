@@ -57,3 +57,7 @@ To run the multiverse analysis within the container, you can run the following c
 ```bash
 docker run --rm -v $(pwd)/output:/app/output multiverse-analysis
 ```
+
+## License
+
+This work is licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Please note that the ACS PUMS data used in this work is not owned by the authors and may fall under a different license.
