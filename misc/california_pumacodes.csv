@@ -1,0 +1,266 @@
+puma_code,puma_area_name
+06 00101,Alameda County (North)--Berkeley & Albany Cities PUMA
+06 00102,Alameda County (Northwest)--Oakland (Northwest) & Emeryville Cities PUMA
+06 00103,Alameda County (Northeast)--Oakland (East) & Piedmont Cities PUMA
+06 00104,Alameda County (North Central)--Oakland City (South Central) PUMA
+06 00105,"Alameda County (West)--San Leandro, Alameda & Oakland (Southwest) Cities PUMA"
+06 00106,"Alameda County (North Central)--Castro Valley, San Lorenzo & Ashland PUMA"
+06 00107,Alameda County (Central)--Hayward City PUMA
+06 00108,"Alameda County (Southwest)--Union City, Newark & Fremont (West) Cities PUMA"
+06 00109,Alameda County (South Central)--Fremont City (East) PUMA
+06 00110,"Alameda County (East)--Livermore, Pleasanton & Dublin Cities PUMA"
+06 00300,"Alpine, Amador, Calaveras, Inyo, Mariposa, Mono & Tuolumne Counties PUMA"
+06 00701,Butte County (Northwest)--Chico City PUMA
+06 00702,Butte County (Southeast)--Oroville City & Paradise Town PUMA
+06 01100,"Colusa, Glenn, Tehama & Trinity Counties PUMA"
+06 01301,Contra Costa County (Far Southwest)--Richmond (Southwest) & San Pablo Cities PUMA
+06 01302,"Contra Costa County (Far Northwest)--Richmond (North), Hercules & El Cerrito Cites PUMA"
+06 01303,"Contra Costa County (Northwest)--Concord (West), Martinez & Pleasant Hill Cities PUMA"
+06 01304,"Contra Costa County--Walnut Creek (West), Lafayette, Orinda Cities & Moraga Town PUMA"
+06 01305,Contra Costa County (South)--San Ramon City & Danville Town PUMA
+06 01306,"Contra Costa County (Central)--Concord (South), Walnut Creek (East) & Clayton Cities PUMA"
+06 01307,Contra Costa County (North Central)--Pittsburg & Concord (North & East) Cities PUMA
+06 01308,Contra Costa County (Northeast)--Antioch City PUMA
+06 01309,Contra Costa County (East)--Brentwood & Oakley Cities PUMA
+06 01500,"Del Norte, Lassen, Modoc, Plumas & Siskiyou Counties PUMA"
+06 01700,El Dorado County--El Dorado Hills PUMA
+06 01901,"Fresno County (West)--Selma, Kerman & Coalinga Cities PUMA"
+06 01902,Fresno County (North Central)--Fresno City (North) PUMA
+06 01903,Fresno County (Central)--Fresno City (East Central) PUMA
+06 01904,Fresno County (Central)--Fresno City (Southwest) PUMA
+06 01905,Fresno County (Central)--Fresno City (Southeast) PUMA
+06 01906,Fresno County (Central)--Clovis City PUMA
+06 01907,"Fresno County (East)--Sanger, Reedley & Parlier Cities PUMA"
+06 02300,Humboldt County PUMA
+06 02500,Imperial County--El Centro City PUMA
+06 02901,"Kern County (West)--Delano, Wasco & Shafter Cities PUMA"
+06 02902,Kern County (Central)--Bakersfield City (West) PUMA
+06 02903,Kern County (Central)--Bakersfield City (Northeast) PUMA
+06 02904,Kern County (Central)--Bakersfield City (Southeast) PUMA
+06 02905,"Kern County (East)--Ridgecrest, Arvin, Tehachapi & California City Cities PUMA"
+06 03100,Kings County--Hanford City PUMA
+06 03300,Lake & Mendocino Counties PUMA
+06 03701,Los Angeles County (North/Unincorporated)--Castaic PUMA
+06 03702,Los Angeles County (Northwest)--Santa Clarita City PUMA
+06 03703,Los Angeles County (North Central)--Lancaster City PUMA
+06 03704,Los Angeles County (North Central)--Palmdale City PUMA
+06 03705,Los Angeles County (North)--LA City (Northwest/Chatsworth & Porter Ranch) PUMA
+06 03706,Los Angeles County (North)--LA City (North Central/Granada Hills & Sylmar) PUMA
+06 03707,Los Angeles County--LA (North Central/Arleta & Pacoima) & San Fernando Cities PUMA
+06 03708,"Los Angeles County (North)--LA City (Northeast/Sunland, Sun Valley & Tujunga) PUMA"
+06 03709,Los Angeles County (Central)--San Gabriel Valley Region (North) PUMA
+06 03710,"Los Angeles County--Baldwin Park, Azusa, Duarte & Irwindale Cities PUMA"
+06 03711,"Los Angeles County (East Central)--Glendora, Claremont, San Dimas & La Verne Cities PUMA"
+06 03712,Los Angeles County (East Central)--Pomona City PUMA
+06 03713,Los Angeles County (East Central)--Covina & Walnut Cities PUMA
+06 03714,"Los Angeles County--Diamond Bar, La Habra Heights (East) Cities & Rowland Heights PUMA"
+06 03715,Los Angeles County (East Central)--West Covina City PUMA
+06 03716,Los Angeles County (East Central)--La Puente & Industry Cities PUMA
+06 03717,"Los Angeles County (East Central)--Arcadia, San Gabriel & Temple City Cities PUMA"
+06 03718,Los Angeles County (Central)--Pasadena City PUMA
+06 03719,Los Angeles County (Central)--Glendale City PUMA
+06 03720,Los Angeles County (Central)--Burbank City PUMA
+06 03721,Los Angeles County (North)--LA City (Northeast/North Hollywood & Valley Village) PUMA
+06 03722,Los Angeles County (Northwest)--LA City (North Central/Van Nuys & North Sherman Oaks) PUMA
+06 03723,Los Angeles County (North)--LA City (North Central/Mission Hills & Panorama City) PUMA
+06 03724,Los Angeles County (Northwest)--LA City (Northwest/Encino & Tarzana) PUMA
+06 03725,"Los Angeles County--LA City (Northwest/Canoga Park, Winnetka & Woodland Hills) PUMA"
+06 03726,"Los Angeles County--Calabasas, Agoura Hills, Malibu & Westlake Village Cities PUMA"
+06 03727,Los Angeles County (Central)--LA City (Central/Pacific Palisades) PUMA
+06 03728,Los Angeles County (Southwest)--Santa Monica City PUMA
+06 03729,Los Angeles County (West Central)--LA City (West Central/Westwood & West Los Angeles) PUMA
+06 03730,Los Angeles County (West Central)--LA City (Central/Hancock Park & Mid-Wilshire) PUMA
+06 03731,Los Angeles County (Central)--West Hollywood & Beverly Hills Cities PUMA
+06 03732,Los Angeles County (Central)--LA City (East Central/Hollywood) PUMA
+06 03733,Los Angeles County (Central)--LA City (Central/Koreatown) PUMA
+06 03734,"Los Angeles County--LA City (East Central/Silver Lake, Echo Park & Westlake) PUMA"
+06 03735,"Los Angeles County--LA City (Mount Washington, Highland Park & Glassell Park) PUMA"
+06 03736,Los Angeles County (Central)--Alhambra & South Pasadena Cities PUMA
+06 03737,Los Angeles County (Central)--Monterey Park & Rosemead Cities PUMA
+06 03738,Los Angeles County (Central)--El Monte & South El Monte Cities PUMA
+06 03739,Los Angeles County (Southeast)--Whittier City & Hacienda Heights PUMA
+06 03740,Los Angeles County (Central)--Pico Rivera & Montebello Cities PUMA
+06 03741,"Los Angeles County (Central)--Bell Gardens, Bell, Maywood, Cudahy & Commerce Cities PUMA"
+06 03742,"Los Angeles County (Central)--Huntington Park City, Florence-Graham & Walnut Park PUMA"
+06 03743,Los Angeles County (Central)--East Los Angeles PUMA
+06 03744,Los Angeles County (Central)--LA City (East Central/Central City & Boyle Heights) PUMA
+06 03745,Los Angeles County (Central)--LA City (Southeast/East Vernon) PUMA
+06 03746,Los Angeles County--LA City (Central/Univ. of Southern California & Exposition Park) PUMA
+06 03747,Los Angeles County (Central)--LA City (Central/West Adams & Baldwin Hills) PUMA
+06 03748,Los Angeles County--LA (Southwest/Marina del Rey & Westchester) & Culver City Cities PUMA
+06 03749,Los Angeles County (Central)--Inglewood City PUMA
+06 03750,Los Angeles County (South Central)--LA City (South Central/Westmont) PUMA
+06 03751,Los Angeles County (South Central)--LA City (South Central/Watts) PUMA
+06 03752,Los Angeles County (South)--South Gate & Lynwood Cities PUMA
+06 03753,Los Angeles County (South)--Downey City PUMA
+06 03754,Los Angeles County (Southeast)--La Mirada & Santa Fe Springs Cities PUMA
+06 03755,Los Angeles County (Southeast)--Norwalk City PUMA
+06 03756,Los Angeles County (Southeast)--Bellflower & Paramount Cities PUMA
+06 03757,Los Angeles County (South Central)--Compton City & West Rancho Dominguez PUMA
+06 03758,"Los Angeles County (South Central)--Gardena, Lawndale Cities & West Athens PUMA"
+06 03759,Los Angeles County (South Central)--Hawthorne City PUMA
+06 03760,"Los Angeles County--Redondo Beach, Manhattan Beach & Hermosa Beach Cities PUMA"
+06 03761,Los Angeles County (South Central)--Torrance City PUMA
+06 03762,Los Angeles County (South Central)--Carson City PUMA
+06 03763,Los Angeles County (South Central)--Long Beach City (North) PUMA
+06 03764,"Los Angeles County (South)--Lakewood, Cerritos, Artesia & Hawaiian Gardens Cities PUMA"
+06 03765,Los Angeles County (Southeast)--Long Beach City (East) PUMA
+06 03766,Los Angeles County (South)--Long Beach City (Southwest & Port) PUMA
+06 03767,Los Angeles County (South)--LA City (South/San Pedro) PUMA
+06 03768,Los Angeles County (Southwest)--Palos Verdes Peninsula PUMA
+06 03769,Los Angeles County (Southeast)--Long Beach (Central) & Signal Hill Cities PUMA
+06 03900,Madera County--Madera City PUMA
+06 04101,Marin County (North & West)--Novato & San Rafael (North) Cities PUMA
+06 04102,"Marin County (Southeast)--San Rafael (South), Mill Valley & Sausalito Cities PUMA"
+06 04701,Merced County (West & South)--Los Banos & Livingston Cities PUMA
+06 04702,Merced County (Northeast)--Merced & Atwater Cities PUMA
+06 05301,"Monterey County (North Central)--Seaside, Monterey, Marina & Pacific Grove Cities PUMA"
+06 05302,Monterey County (Northeast)--Salinas City PUMA
+06 05303,Monterey (South & East) & San Benito Counties PUMA
+06 05500,Napa County--Napa City PUMA
+06 05700,Nevada & Sierra Counties PUMA
+06 05901,"Orange County (Southwest)--San Clemente, Laguna Niguel & San Juan Capistrano Cities PUMA"
+06 05902,Orange County (South Central)--Mission Viejo & Rancho Santa Margarita (West) Cities PUMA
+06 05903,"Orange County (West Central)--Newport Beach, Aliso Viejo & Laguna Hills Cities PUMA"
+06 05904,Orange County (Central)--Irvine City (Central) PUMA
+06 05905,"Orange County (Northeast)--Lake Forest, Irvine (North) Cities & Silverado PUMA"
+06 05906,"Orange County (North)--Yorba Linda, La Habra & Brea Cities PUMA"
+06 05907,Orange County (North Central)--Fullerton & Placentia Cities PUMA
+06 05908,"Orange County (Northwest)--Buena Park, Cypress & Seal Beach Cities PUMA"
+06 05909,Orange County (North Central)--Anaheim City (West) PUMA
+06 05910,Orange County (North Central)--Anaheim City (East) PUMA
+06 05911,Orange County (Central)--Orange & Villa Park Cities PUMA
+06 05912,"Orange County (Northwest)--Westminster, Stanton & Garden Grove (West) Cities PUMA"
+06 05913,Orange County (Northwest)--Garden Grove City (East) PUMA
+06 05914,Orange County (Northwest)--Huntington Beach City PUMA
+06 05915,Orange County (Southeast)--Rancho Santa Margarita City (East) & Ladera Ranch PUMA
+06 05916,Orange County (Central)--Santa Ana City (West) PUMA
+06 05917,Orange County (Central)--Santa Ana City (East) PUMA
+06 05918,Orange County (Central)--Costa Mesa & Fountain Valley Cities PUMA
+06 06101,Placer County (Southwest)--Roseville City PUMA
+06 06102,"Placer County (Central)--Rocklin, Lincoln Cities & Loomis Town PUMA"
+06 06103,Placer County (East/High Country Region)--Auburn & Colfax Cities PUMA
+06 06501,"Riverside County (East)--Indio, Coachella, Blythe & La Quinta (East) Cities PUMA"
+06 06502,"Riverside County (Central)--Cathedral City, Palm Springs & Rancho Mirage Cities PUMA"
+06 06503,Riverside County (Southwest)--Temecula City PUMA
+06 06504,Riverside County (Southwest)--Murrieta & Wildomar Cities PUMA
+06 06505,"Riverside County (Southwest)--Menifee, Lake Elsinore & Canyon Lake Cities PUMA"
+06 06506,Riverside County (Southwest)--Hemet City & East Hemet PUMA
+06 06507,"Riverside County (North Central)--San Jacinto, Beaumont, Banning & Calimesa Cities PUMA"
+06 06508,Riverside County (Northwest)--Moreno Valley City PUMA
+06 06509,"Riverside County (West Central)--Perris City, Temescal Valley & Mead Valley PUMA"
+06 06510,Riverside County (Northwest)--Riverside City (East) PUMA
+06 06511,Riverside County (Northwest)--Riverside City (West) PUMA
+06 06512,"Riverside County (West Central)--Corona City (South), Woodcrest & Home Gardens PUMA"
+06 06513,Riverside County (West Central)--Corona (Northwest) & Norco Cities PUMA
+06 06514,Riverside County (Northwest)--Jurupa Valley & Eastvale Cities PUMA
+06 06515,"Riverside County--Palm Desert, La Quinta (West) & Desert Hot Springs Cities PUMA"
+06 06701,Sacramento County (North Central)--Citrus Heights City PUMA
+06 06702,Sacramento County (Central)--Rancho Cordova City PUMA
+06 06703,"Sacramento County (North Central)--Arden-Arcade, Carmichael & Fair Oaks (West) PUMA"
+06 06704,"Sacramento County (North Central)--North Highlands, Foothill Farms & McClellan Park PUMA"
+06 06705,Sacramento County (Northwest)--Sacramento City (Northwest/Natomas) PUMA
+06 06706,"Sacramento County (North)--Sacramento City (North), Antelope & Rio Linda PUMA"
+06 06707,Sacramento County (West)--Sacramento City (Central/Downtown & Midtown) PUMA
+06 06708,"Sacramento County--Sacramento City (Southeast/Fruitridge, Avondale & Depot Park) PUMA"
+06 06709,"Sacramento County--Sacramento City (Southwest/Pocket, Meadowview & North Laguna) PUMA"
+06 06710,Sacramento County (Central)--Elk Grove City PUMA
+06 06711,"Sacramento County (South)--Galt, Isleton Cities & Delta Region PUMA"
+06 06712,"Sacramento County (Northeast)--Folsom City, Orangevale & Fair Oaks (East) PUMA"
+06 07101,San Bernardino County (Northeast)--Twentynine Palms & Barstow Cities PUMA
+06 07102,San Bernardino County (West Central)--Victorville & Adelanto Cities PUMA
+06 07103,San Bernardino County (West Central)--Hesperia City & Apple Valley Town PUMA
+06 07104,"San Bernardino County (Southwest)--Phelan, Lake Arrowhead & Big Bear City PUMA"
+06 07105,San Bernardino County (Southwest)--Redlands & Yucaipa Cities PUMA
+06 07106,"San Bernardino County (Southwest)--Colton, Loma Linda & Grand Terrace Cities PUMA"
+06 07107,San Bernardino County (Southwest)--San Bernardino City (East) PUMA
+06 07108,San Bernardino County (Southwest)--San Bernardino City (West) PUMA
+06 07109,San Bernardino County (Southwest)--Rialto City PUMA
+06 07110,San Bernardino County (Southwest)--Fontana City (East) PUMA
+06 07111,San Bernardino County (Southwest)--Rancho Cucamonga City PUMA
+06 07112,San Bernardino County (Southwest)--Upland & Montclair Cities PUMA
+06 07113,San Bernardino County (Southwest)--Ontario City PUMA
+06 07114,San Bernardino County (Southwest)--Chino & Chino Hills Cities PUMA
+06 07115,San Bernardino County (Southwest)--Fontana City (West) PUMA
+06 07301,San Diego County (Northwest)--Oceanside City & Camp Pendleton PUMA
+06 07302,"San Diego County (North & East)--Fallbrook, Alpine & Valley Center PUMA"
+06 07303,San Diego County (Northwest)--Vista City PUMA
+06 07304,San Diego County (Northwest)--Carlsbad City PUMA
+06 07305,San Diego County (Northwest)--San Marcos & Escondido (West) Cities PUMA
+06 07306,San Diego County (Northwest)--Escondido City (East) PUMA
+06 07307,"San Diego County (Central)--Lakeside, Winter Gardens & Ramona PUMA"
+06 07308,San Diego County (Central)--San Diego (Northeast/Rancho Bernardo) & Poway Cities PUMA
+06 07309,San Diego County (West)--San Diego (Northwest/San Dieguito) & Encinitas Cities PUMA
+06 07310,San Diego County (West)--San Diego City (Southwest/Central Coastal) PUMA
+06 07311,San Diego County (West Central)--San Diego City (Northwest/Del Mar Mesa) PUMA
+06 07312,San Diego County (Central)--San Diego City (Central/Mira Mesa & University Heights) PUMA
+06 07313,San Diego County (Central)--El Cajon & Santee Cities PUMA
+06 07314,San Diego County (Central)--San Diego (East Central/Navajo) & La Mesa Cities PUMA
+06 07315,San Diego County (West Central)--San Diego City (Central/Clairemont & Kearny Mesa) PUMA
+06 07316,San Diego County (South Central)--San Diego City (Central/Centre City & Balboa Park) PUMA
+06 07317,San Diego County (South Central)--San Diego City (Central/Mid-City) PUMA
+06 07318,San Diego County (South)--San Diego City (Southeast/Encanto & Skyline) PUMA
+06 07319,"San Diego County (South Central)--Lemon Grove City, La Presa & Spring Valley PUMA"
+06 07320,San Diego County (Southwest)--Sweetwater Region--Chula Vista City (East) PUMA
+06 07321,San Diego County (Southwest)--Chula Vista (West) & National City Cities PUMA
+06 07322,San Diego County (South)--San Diego City (South/Otay Mesa & South Bay) PUMA
+06 07501,San Francisco County (North & West)--Richmond District PUMA
+06 07502,San Francisco County (North & East)--North Beach & Chinatown PUMA
+06 07503,San Francisco County (Central)--South of Market & Potrero PUMA
+06 07504,San Francisco County (Central)--Inner Mission & Castro PUMA
+06 07505,San Francisco County (Central)--Sunset District (North) PUMA
+06 07506,San Francisco County (South Central)--Sunset District (South) PUMA
+06 07507,San Francisco County (South Central)--Bayview & Hunters Point PUMA
+06 07701,San Joaquin County (Central)--Stockton City (North) PUMA
+06 07702,San Joaquin County (Central)--Stockton City (South) PUMA
+06 07703,"San Joaquin County (South)--Tracy, Manteca & Lathrop Cities PUMA"
+06 07704,"San Joaquin County (North)--Lodi, Ripon & Escalon Cities PUMA"
+06 07901,San Luis Obispo County (West)--Coastal Region PUMA
+06 07902,San Luis Obispo County (East)--Inland Region PUMA
+06 08101,"San Mateo County (North Central)--Daly City, Pacifica Cities & Colma Town PUMA"
+06 08102,"San Mateo County (North Central)--South San Francisco, San Bruno & Brisbane Cities PUMA"
+06 08103,"San Mateo County (Central)--San Mateo (North), Burlingame & Millbrae Cities PUMA"
+06 08104,San Mateo County (South & West)--San Mateo (South) & Half Moon Bay Cities PUMA
+06 08105,"San Mateo County (East Central)--Redwood City, San Carlos & Belmont Cities PUMA"
+06 08106,"San Mateo County (Southeast)--Menlo Park, East Palo Alto Cities & Atherton Town PUMA"
+06 08301,Santa Barbara County (Northwest)--Santa Maria City & Orcutt PUMA
+06 08302,"Santa Barbara County (North)--Lompoc, Guadalupe, Solvang & Buellton Cities PUMA"
+06 08303,Santa Barbara County--South Coast Region PUMA
+06 08501,"Santa Clara County (Northwest)--Mountain View, Palo Alto & Los Altos Cities PUMA"
+06 08502,Santa Clara County (Northwest)--Sunnyvale & San Jose (North) Cities PUMA
+06 08503,Santa Clara County (Northwest)--San Jose (Northwest) & Santa Clara Cities PUMA
+06 08504,Santa Clara County (North Central)--Milpitas & San Jose (Northeast) Cities PUMA
+06 08505,Santa Clara County (North Central)--San Jose City (East Central) & Alum Rock PUMA
+06 08506,"Santa Clara County (East)--Gilroy, Morgan Hill & San Jose (South) Cities PUMA"
+06 08507,"Santa Clara County (Southwest)--Cupertino, Saratoga Cities & Los Gatos Town PUMA"
+06 08508,Santa Clara County (Central)--San Jose (West Central) & Campbell Cities PUMA
+06 08509,Santa Clara County (Central)--San Jose City (Northwest) PUMA
+06 08510,Santa Clara County (Central)--San Jose City (Central) PUMA
+06 08511,Santa Clara County (Central)--San Jose City (South Central/Branham) & Cambrian Park PUMA
+06 08512,Santa Clara County (Central)--San Jose City (Southwest/Almaden Valley) PUMA
+06 08513,Santa Clara County (Central)--San Jose City (Southeast/Evergreen) PUMA
+06 08514,Santa Clara County (Central)--San Jose City (East Central/East Valley) PUMA
+06 08701,Santa Cruz County (North)--Watsonville & Scotts Valley Cities PUMA
+06 08702,Santa Cruz County (South & Coastal)--Santa Cruz City PUMA
+06 08900,Shasta County--Redding City PUMA
+06 09501,Solano County (Southwest)--Vallejo & Benicia Cities PUMA
+06 09502,Solano County (Central)--Fairfield & Suisun City Cities PUMA
+06 09503,Solano County (Northeast)--Vacaville & Dixon Cities PUMA
+06 09701,"Sonoma County (North)--Windsor Town, Healdsburg & Sonoma Cities PUMA"
+06 09702,"Sonoma County (South)--Petaluma, Rohnert Park & Cotati Cities PUMA"
+06 09703,Sonoma County (Central)--Santa Rosa City PUMA
+06 09901,"Stanislaus County (Southwest)--Ceres, Patterson & Newman Cities PUMA"
+06 09902,Stanislaus County (Central)--Modesto City (West) PUMA
+06 09903,"Stanislaus County (Northeast)--Turlock, Riverbank, Oakdale & Waterford Cities PUMA"
+06 09904,Stanislaus County (Central)--Modesto City (East) PUMA
+06 10100,Sutter & Yuba Counties--Yuba City PUMA
+06 10701,Tulare County (Northwest)--Visalia City PUMA
+06 10702,Tulare County (West Central)--Tulare & Porterville Cities PUMA
+06 10703,"Tulare County (Outside Visalia, Tulare & Porterville Cities) PUMA"
+06 11101,Ventura County (Southeast)--Simi Valley City PUMA
+06 11102,Ventura County (Southeast)--Thousand Oaks City PUMA
+06 11103,Ventura County (Southwest)--Oxnard & Port Hueneme Cities PUMA
+06 11104,Ventura County (Southwest)--San Buenaventura (Ventura) City PUMA
+06 11105,"Ventura County (North)--Santa Paula, Fillmore & Ojai Cities PUMA"
+06 11106,Ventura County (South Central)--Camarillo & Moorpark Cities PUMA
+06 11300,"Yolo County--Davis, Woodland & West Sacramento Cities PUMA"
