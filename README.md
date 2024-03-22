@@ -43,8 +43,10 @@ To make it easier to run the code and for the sake of long term reproducibility,
 To run the multiverse analysis within our prebuilt container, you can run the following command:
 
 ```bash
-docker run --rm -v $(pwd)/output:/app/output ghcr.io/reliable-ai/fairml-multiverse
+docker run --rm --cpus=5 -v $(pwd)/output:/app/output ghcr.io/reliable-ai/fairml-multiverse
 ```
+
+Please note the cpus flag here, which may be necessary based on how powerful of a machine you use. When we first conducted the analysis on an 8 core machine we did not encounter any issues, but when running the analysis on a 32 core machine we encountered issues with a race condition leading to errors upon startup due to a [bug](https://github.com/nteract/papermill/issues/511) in the Jupyter client.
 
 If you want to verify first whether the basic execution of the analysis works, by test running a few universes, you can run the following command. We definitely recommend doing this before running the whole analysis.
 
@@ -69,7 +71,19 @@ docker run --rm fairml-multiverse pipenv run python -m unittest
 To run the multiverse analysis within the container you built yourself, you can run the following command:
 
 ```bash
-docker run --rm -v $(pwd)/output:/app/output fairml-multiverse
+docker run --rm --cpus=5 -v $(pwd)/output:/app/output fairml-multiverse
+```
+
+### Replications
+
+To ensure robustness of we reran the analysis with 5 different seeds, taken from random.org (9490635, 9617311, 7076729, 108100, 2411824). To rerun the analysis with these modified seeds we recommend the following code, where the output from each analysis will be stored in a separate output directory. You can also run these commands in parallel using the `-d` flag to have them run in the background.
+
+```bash
+docker run --rm --cpus=5 --env SEED=9490635 -v $(pwd)/output-9617311:/app/output ghcr.io/reliable-ai/fairml-multiverse
+docker run --rm --cpus=5 --env SEED=9617311 -v $(pwd)/output-9617311:/app/output ghcr.io/reliable-ai/fairml-multiverse
+docker run --rm --cpus=5 --env SEED=7076729 -v $(pwd)/output-7076729:/app/output ghcr.io/reliable-ai/fairml-multiverse
+docker run --rm --cpus=5 --env SEED=108100 -v $(pwd)/output-108100:/app/output ghcr.io/reliable-ai/fairml-multiverse
+docker run --rm --cpus=5 --env SEED=2411824 -v $(pwd)/output-2411824:/app/output ghcr.io/reliable-ai/fairml-multiverse
 ```
 
 ## License
