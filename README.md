@@ -20,13 +20,15 @@ This project uses [Pipenv](https://pipenv.pypa.io/en/latest/) to control the Pyt
 
 You can check whether the environment is correctly set up by activating the virtual environment (`pipenv shell`) and running the test cases via `python -m unittest`. This should output the number of tests that were run (these should be more than 0!) and a message that all tests passed (OK).
 
-### Running the Analysis
+### Running the Multiverse Analysis
 
 You can run the complete multiverse analysis by running `python multiverse_analysis.py`. Make sure to activate the virtual environment beforehand, so that the installed dependencies are available. By default this will allow you to stop and restart the analysis between different universe runs.
 
 To explore the individual analyses conducted in each *universe* of the *multiverse*, we recommend examining `universe_analysis.ipynb`. This notebook will be executed many times with different settings for each universe.
 
-The different Jupyter notebooks prefixed with `analysis` are analyzing the generated output from the multiverse analysis.
+### Analysing the Results
+
+The different Jupyter notebooks prefixed with `analysis` are analyzing the generated output from the multiverse analysis. To compute e.g. the different measures of variable importance, you can run the notebook [`analysis_var_imp_overall.ipynb`](./analysis_var_imp_overall.ipynb). The `analysis__setup.ipynb` is used for loading and preparing the multiverse analysis results and is called by the other notebooks internally. You may wish to change this notebook, though, to choose the correct `run` to analyze.
 
 ## Examining the Generated Data
 
@@ -35,6 +37,14 @@ The generated data from the different analyses is located in the `output` direct
 ## Container Image 📦️
 
 To make it easier to run the code and for the sake of long term reproducibility, we provide a container image that contains all the necessary dependencies. The container image is built using [Docker](https://www.docker.com/), using it with [Podman](https://podman.io/) is most likely also possible, but not yet tested.
+
+### Running the Analysis
+
+To run the multiverse analysis within our prebuilt container, you can run the following command:
+
+```bash
+docker run --rm -v $(pwd)/output:/app/output ghcr.io/reliable-ai/fairml-multiverse
+```
 
 ### Building
 
@@ -50,9 +60,7 @@ To check whether the image is built correctly, you can run the following command
 docker run --rm fairml-multiverse pipenv run python -m unittest
 ```
 
-### Running the Analysis
-
-To run the multiverse analysis within the container, you can run the following command:
+To run the multiverse analysis within the container you built yourself, you can run the following command:
 
 ```bash
 docker run --rm -v $(pwd)/output:/app/output fairml-multiverse
