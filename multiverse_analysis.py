@@ -14,8 +14,8 @@ parser.add_argument(
         "full: run all universes, "
         "test: run only a small subset of universes)"
     ),
-    choices=["continue", "full", "test"],
-    default="continue",
+    choices=["full", "continue", "test"],
+    default="full",
 )
 def verify_dir(string):
     if Path(string).is_dir():
