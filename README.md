@@ -2,7 +2,7 @@
 
 # Multiverse Analysis for Algorithmic Fairness
 
-This repository contains the source code and generated data for the preprint [Everything, Everywhere All in One Evaluation: Using Multiverse Analysis to Evaluate the Influence of Model Design Decisions on Algorithmic Fairness](https://arxiv.org/abs/2308.16681).
+This repository contains the source code and generated data for the preprint [One Model Many Scores: Using Multiverse Analysis to Prevent Fairness Hacking and Evaluate the Influence of Model Design Decisions](https://arxiv.org/abs/2308.16681).
 
 The reproducible manuscript will be made available after publication of the paper at the latest.
 
