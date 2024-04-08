@@ -1,0 +1,74 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy-interactive-analysis.yml'
+      - 'interactive-analysis/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Install DuckDB CLI
+        run: |
+          wget https://github.com/duckdb/duckdb/releases/download/v0.10.0/duckdb_cli-linux-amd64.zip
+          unzip duckdb_cli-linux-amd64.zip
+          mkdir /opt/duckdb && mv duckdb /opt/duckdb && chmod +x /opt/duckdb/duckdb && sudo ln -s /opt/duckdb/duckdb /usr/bin/duckdb
+          rm duckdb_cli-linux-amd64.zip
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - id: date
+        run: echo "date=$(TZ=America/Los_Angeles date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - id: cache-data
+        uses: actions/cache@v4
+        with:
+          path: |
+            interactive-analysis/docs/.observablehq/cache
+          key: data-${{ hashFiles('interactive-analysis/docs/data/*') }}-${{ steps.date.outputs.date }}
+
+      - if: steps.cache-data.outputs.cache-hit == 'true'
+        run: find interactive-analysis/docs/.observablehq/cache -type f -exec touch {} +
+
+      - name: Build
+        working-directory: interactive-analysis
+        run: npm run build
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: interactive-analysis/dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
