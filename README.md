@@ -6,6 +6,8 @@ This repository contains the source code and generated data for the preprint [On
 
 The reproducible manuscript will be made available after publication of the paper at the latest.
 
+You can interactively explore some of the results of the paper at [https://reliable-ai.github.io/fairml-multiverse/](https://reliable-ai.github.io/fairml-multiverse/).
+
 ## Abstract
 
 A vast number of systems across the world use algorithmic decision making (ADM) to (partially) automate decisions that have previously been made by humans. When designed well, these systems promise more objective decisions while saving large amounts of resources and freeing up human time. However, when ADM systems are not designed well, they can lead to unfair decisions which discriminate against societal groups. The downstream effects of ADMs critically depend on the decisions made during the systems’ design and implementation, as biases in data can be mitigated or reinforced along the modeling pipeline. Many of these design decisions are made implicitly, without knowing exactly how they will influence the final system. It is therefore important to make explicit the decisions made during the design of ADM systems and understand how these decisions affect the fairness of the resulting system.
