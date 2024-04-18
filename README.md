@@ -36,7 +36,19 @@ The different Jupyter notebooks prefixed with `analysis` are analyzing the gener
 
 The generated data from the different analyses is located in the `output` directory. Raw data from the different *universes* can be found under `output/runs/`, raw data from the analyses e.g. the FANOVAs can be found under `output/analyses/`.
 
-## Container Image 📦️
+# Adapting the Analysis
+
+We purposefully created our analysis in a way that makes it easy to adapt for your own usecase(s). The steps do so are as follows:
+
+1. Clone (or fork) this repository to have a copy of the codebase.
+2. Follow the steps in the "Setup" section to install dependencies and create a virtual environment.
+3. *Optional:* Delete files and results from the original analysis. You can safely delete the `data/`, `misc/`, `interactive-analysis/` and `output/` directories.
+4. Modify the [`universe_analysis.ipynb`](./universe_analysis.ipynb) notebook to contain your analysis instead. All settings / options you may wish to modify as explicit decisions in the multiverse can be configured in the `universe` object.
+   - We recommend verifying that your universe analysis script works correctly by trying out a few settings and running the script manually.
+5. Once you are satisfied with your universe analysis, you can update the [`multiverse_analysis.py`](./multiverse_analysis.py) script to include all available options for the decisions you created in the `universe_analysis.ipynb`.
+6. Execute the multiverse analysis script by running `python multiverse_analysis.py`. Make sure you are running your analysis inside the virtual environment created in step 2.
+
+# Container Image 📦️
 
 To make it easier to run the code and for the sake of long term reproducibility, we provide a container image that contains all the necessary dependencies. The container image is built using [Docker](https://www.docker.com/), using it with [Podman](https://podman.io/) is most likely also possible, but not yet tested.
 
