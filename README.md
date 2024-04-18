@@ -48,6 +48,14 @@ We purposefully created our analysis in a way that makes it easy to adapt for yo
 5. Once you are satisfied with your universe analysis, you can update the [`multiverse_analysis.py`](./multiverse_analysis.py) script to include all available options for the decisions you created in the `universe_analysis.ipynb`.
 6. Execute the multiverse analysis script by running `python multiverse_analysis.py`. Make sure you are running your analysis inside the virtual environment created in step 2.
 
+## Important Concepts
+
+In a multiverse analysis, we analyse the complete *multiverse* of plausible ML models. This *multiverse* is constructed by combining the plausible settings / options of multiple decisions one encounters during the design of an ML system. Each *universe* in this *multiverse*, corresponds to a unique combination of different decisions.
+
+In our analysis we differentiate between "full" *universes*, which require refitting of the machine learnung model and *sub-universes* which can be evaluated without re-fitting the model. This distinction exists only for the sake of optimization, to save time when running the analysis. It is therefore completely optional to make use of sub-universes.
+
+When specifying the dimensions of the *multiverse*, *sub-universes* are specified by passing in a list of lists (`[["a", "b"]]`) instead of a list (`["a", "b"]`). Each universe will receive a list of options / settings then instead of just a single option.
+
 # Container Image 📦️
 
 To make it easier to run the code and for the sake of long term reproducibility, we provide a container image that contains all the necessary dependencies. The container image is built using [Docker](https://www.docker.com/), using it with [Podman](https://podman.io/) is most likely also possible, but not yet tested.
