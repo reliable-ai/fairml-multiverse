@@ -1,0 +1,950 @@
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+
+@article{ding2021,
+	title = {Retiring Adult: New Datasets for Fair Machine Learning},
+	author = {Ding, Frances and Hardt, Moritz and Miller, John and Schmidt, Ludwig},
+	year = {2021},
+	date = {2021},
+	pages = {13},
+	langid = {en}
+}
+
+@article{fabris2022,
+	title = {Algorithmic fairness datasets: the story so far},
+	author = {Fabris, Alessandro and Messina, Stefano and Silvello, Gianmaria and Susto, Gian Antonio},
+	year = {2022},
+	month = {09},
+	date = {2022-09-17},
+	journal = {Data Mining and Knowledge Discovery},
+	doi = {10.1007/s10618-022-00854-z},
+	url = {https://doi.org/10.1007/s10618-022-00854-z},
+	langid = {en}
+}
+
+@article{bao,
+	title = {It's COMPASlicated: The Messy Relationship between RAI Datasets and Algorithmic Fairness Benchmarks},
+	author = {Bao, Michelle and Zhou, Angela and Zottola, Samantha and Brubach, Brian and Desmarais, Sarah and Horowitz, Aaron and Lum, Kristian and Venkatasubramanian, Suresh},
+	year = {2022},
+	doi = {10.48550/arXiv.2106.05498}
+}
+
+@article{ortiz-ospina2017,
+	title = {Healthcare Spending},
+	author = {Ortiz-Ospina, Esteban and Roser, Max},
+	year = {2017},
+	month = {06},
+	date = {2017-06-16},
+	journal = {Our World in Data},
+	url = {https://ourworldindata.org/financing-healthcare}
+}
+
+@article{sommers2017,
+	title = {Health Insurance Coverage and Health {\textemdash} What the Recent Evidence Tells Us},
+	author = {Sommers, Benjamin D. and Gawande, Atul A. and Baicker, Katherine},
+	year = {2017},
+	month = {08},
+	date = {2017-08-10},
+	journal = {New England Journal of Medicine},
+	pages = {586--593},
+	volume = {377},
+	number = {6},
+	doi = {10.1056/NEJMsb1706645},
+	url = {http://www.nejm.org/doi/10.1056/NEJMsb1706645},
+	langid = {en}
+}
+
+@misc{uscensusbureau,
+	title = {ACS Health Insurance Coverage Recoding Programming Code},
+	author = {US Census Bureau },
+	year = {2021},
+	url = {https://www.census.gov/topics/health/health-insurance/guidance/programming-code/acs-recoding.html},
+	note = {Section: Government}
+}
+
+@techreport{amnestyinternational2021,
+	title = {Xenophobic Machines},
+	author = {Amnesty International },
+	year = {2021},
+	date = {2021},
+	url = {https://www.amnesty.org/en/wp-content/uploads/2021/10/EUR3546862021ENGLISH.pdf}
+}
+
+@article{steegen2016,
+	title = {Increasing Transparency Through a Multiverse Analysis},
+	author = {Steegen, Sara and Tuerlinckx, Francis and Gelman, Andrew and Vanpaemel, Wolf},
+	year = {2016},
+	month = {09},
+	date = {2016-09-01},
+	journal = {Perspectives on Psychological Science},
+	pages = {702--712},
+	volume = {11},
+	number = {5},
+	doi = {10.1177/1745691616658637},
+	url = {https://doi.org/10.1177/1745691616658637},
+	note = {Publisher: SAGE Publications Inc},
+	langid = {en}
+}
+
+@article{caton2022,
+	title = {Impact of Imputation Strategies on Fairness in Machine Learning},
+	author = {Caton, Simon and Malisetty, Saiteja and Haas, Christian},
+	year = {2022},
+	month = {09},
+	date = {2022-09-19},
+	journal = {Journal of Artificial Intelligence Research},
+	volume = {74},
+	doi = {10.1613/jair.1.13197},
+	url = {https://doi.org/10.1613/jair.1.13197}
+}
+
+@article{dooley2024rethinking,
+  title={Rethinking bias mitigation: Fairer architectures make for fairer face recognition},
+  author={Dooley, Samuel and Sukthanker, Rhea and Dickerson, John and White, Colin and Hutter, Frank and Goldblum, Micah},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+
+@article{bell,
+	title = {Modeling the Machine Learning Multiverse},
+	author = {Bell, Samuel J. and Kampman, Onno P. and Dodge, Jesse and Lawrence, Neil D.},
+	doi = {https://doi.org/10.48550/arXiv.2206.05985},
+	year = {2022},
+	langid = {en}
+}
+
+@inproceedings{hutter2014,
+	title = {International Conference on Machine Learning},
+	author = {Hutter, Frank and Hoos, Holger and Leyton-Brown, Kevin},
+	year = {2014},
+	month = {01},
+	date = {2014-01-27},
+	publisher = {PMLR},
+	pages = {754--762},
+	url = {https://proceedings.mlr.press/v32/hutter14.html},
+	note = {ISSN: 1938-7228},
+	langid = {en}
+}
+
+@article{hooker2007,
+	title = {Generalized Functional ANOVA Diagnostics for High-Dimensional Functions of Dependent Variables},
+	author = {Hooker, Giles},
+	year = {2007},
+	date = {2007},
+	journal = {Journal of Computational and Graphical Statistics},
+	pages = {709--732},
+	volume = {16},
+	number = {3},
+	url = {https://www.jstor.org/stable/27594267}
+}
+
+@article{simonsohn2020specification,
+  title = {Specification Curve Analysis},
+  author = {Simonsohn, Uri and Simmons, Joseph P. and Nelson, Leif D.},
+  year = {2020},
+  month = nov,
+  journal = {Nature Human Behaviour},
+  volume = {4},
+  number = {11},
+  pages = {1208--1214},
+  publisher = {{Nature Publishing Group}},
+  issn = {2397-3374},
+  doi = {10.1038/s41562-020-0912-z},
+  urldate = {2023-02-07},
+  langid = {english},
+  keywords = {Decision making,Economics,Politics,Psychology}
+}
+
+@article{kern,
+	title = {Fairness in Algorithmic Profiling: A German Case Study},
+	author = {Kern, Christoph and Bach, Ruben L. and Mautner, Hannah and Kreuter, Frauke},
+	year = {2021},
+	doi = {10.48550/arXiv.2108.04134}
+}
+
+@inbook{rodolfa2020,
+	title = {Bias and Fairness},
+	author = {Rodolfa, Kit T. and Saleiro, Pedro and Ghani, Rayid},
+	year = {2020},
+	date = {2020},
+	publisher = {Chapman and Hall/CRC},
+	edition = {2},
+	note = {Num Pages: 32}
+}
+
+@article{agarwal,
+	title = {A Reductions Approach to Fair Classification},
+	year = {2018},
+	author = {Agarwal, Alekh and Beygelzimer, Alina and {Dudík}, Miroslav and Langford, John and Wallach, Hanna},
+	langid = {en}
+}
+
+@article{weerts2023,
+  author  = {Hilde Weerts and Miroslav Dudík and Richard Edgar and Adrin Jalali and Roman Lutz and Michael Madaio},
+  title   = {Fairlearn: Assessing and Improving Fairness of AI Systems},
+  journal = {Journal of Machine Learning Research},
+  year    = {2023},
+  volume  = {24},
+  number  = {257},
+  pages   = {1--8},
+  url     = {http://jmlr.org/papers/v24/23-0389.html}
+}
+
+@techreport{keisler-starkey2022,
+	title = {Health Insurance Coverage in the United States: 2021 - Appendix Table C3},
+	author = {Keisler-Starkey, Katherine and Bunch, Lisa N},
+	year = {2022},
+	month = {09},
+	date = {2022-09},
+	url = {https://www.census.gov/content/dam/Census/library/publications/2022/demo/p60-278.pdf},
+	langid = {en}
+}
+
+@article{opensciencecollaboration2015,
+	title = {Estimating the reproducibility of psychological science},
+	author = {{OPEN SCIENCE COLLABORATION }},
+	year = {2015},
+	month = {08},
+	date = {2015-08-28},
+	journal = {Science},
+	pages = {aac4716},
+	volume = {349},
+	number = {6251},
+	doi = {10.1126/science.aac4716},
+	url = {https://www.science.org/doi/10.1126/science.aac4716},
+	note = {Publisher: American Association for the Advancement of Science}
+}
+
+@article{breznau2022,
+	title = {Observing many researchers using the same data and hypothesis reveals a hidden universe of uncertainty},
+	author = {Breznau, Nate and Rinke, Eike Mark and Wuttke, Alexander and Nguyen, Hung H. V. and Adem, Muna and Adriaans, Jule and Alvarez-Benjumea, Amalia and Andersen, Henrik K. and Auer, Daniel and Azevedo, Flavio and Bahnsen, Oke and Balzer, Dave and Bauer, Gerrit and Bauer, Paul C. and Baumann, Markus and Baute, Sharon and Benoit, Verena and Bernauer, Julian and Berning, Carl and Berthold, Anna and Bethke, Felix S. and Biegert, Thomas and Blinzler, Katharina and Blumenberg, Johannes N. and Bobzien, Licia and Bohman, Andrea and Bol, Thijs and Bostic, Amie and Brzozowska, Zuzanna and Burgdorf, Katharina and Burger, Kaspar and Busch, Kathrin B. and Carlos-Castillo, Juan and Chan, Nathan and Christmann, Pablo and Connelly, Roxanne and Czymara, Christian S. and Damian, Elena and Ecker, Alejandro and Edelmann, Achim and Eger, Maureen A. and Ellerbrock, Simon and Forke, Anna and Forster, Andrea and Gaasendam, Chris and Gavras, Konstantin and Gayle, Vernon and Gessler, Theresa and Gnambs, Timo and Godefroidt, {Amélie} and {Grömping}, Max and {Groß}, Martin and Gruber, Stefan and Gummer, Tobias and Hadjar, Andreas and Heisig, Jan Paul and Hellmeier, Sebastian and Heyne, Stefanie and Hirsch, Magdalena and Hjerm, Mikael and Hochman, Oshrat and {Hövermann}, Andreas and Hunger, Sophia and Hunkler, Christian and Huth, Nora and {Ignácz}, {Zsófia S.} and Jacobs, Laura and Jacobsen, Jannes and Jaeger, Bastian and Jungkunz, Sebastian and Jungmann, Nils and Kauff, Mathias and Kleinert, Manuel and Klinger, Julia and Kolb, Jan-Philipp and {Ko{\l}czy{\'{n}}ska}, Marta and Kuk, John and {Kunißen}, Katharina and Kurti Sinatra, Dafina and Langenkamp, Alexander and Lersch, Philipp M. and {Löbel}, Lea-Maria and Lutscher, Philipp and Mader, Matthias and Madia, Joan E. and Malancu, Natalia and Maldonado, Luis and Marahrens, Helge and Martin, Nicole and Martinez, Paul and Mayerl, Jochen and Mayorga, Oscar J. and McManus, Patricia and McWagner, Kyle and Meeusen, Cecil and Meierrieks, Daniel and Mellon, Jonathan and Merhout, Friedolin and Merk, Samuel and Meyer, Daniel and Micheli, Leticia and Mijs, Jonathan and Moya, {Cristóbal} and Neunhoeffer, Marcel and {Nüst}, Daniel and {Nygård}, Olav and Ochsenfeld, Fabian and Otte, Gunnar and Pechenkina, Anna O. and Prosser, Christopher and Raes, Louis and Ralston, Kevin and Ramos, Miguel R. and Roets, Arne and Rogers, Jonathan and Ropers, Guido and Samuel, Robin and Sand, Gregor and Schachter, Ariela and Schaeffer, Merlin and Schieferdecker, David and Schlueter, Elmar and Schmidt, Regine and Schmidt, Katja M. and Schmidt-Catran, Alexander and Schmiedeberg, Claudia and Schneider, {Jürgen} and Schoonvelde, Martijn and Schulte-Cloos, Julia and Schumann, Sandy and Schunck, Reinhard and Schupp, {Jürgen} and Seuring, Julian and Silber, Henning and Sleegers, Willem and Sonntag, Nico and Staudt, Alexander and Steiber, Nadia and Steiner, Nils and Sternberg, Sebastian and Stiers, Dieter and Stojmenovska, Dragana and Storz, Nora and Striessnig, Erich and Stroppe, Anne-Kathrin and Teltemann, Janna and Tibajev, Andrey and Tung, Brian and Vagni, Giacomo and Van Assche, Jasper and van der Linden, Meta and van der Noll, Jolanda and Van Hootegem, Arno and Vogtenhuber, Stefan and Voicu, Bogdan and Wagemans, Fieke and Wehl, Nadja and Werner, Hannah and Wiernik, Brenton M. and Winter, Fabian and Wolf, Christof and Yamada, Yuki and Zhang, Nan and Ziller, Conrad and Zins, Stefan and {{\.{Z}}ó{\l}tak}, Tomasz},
+	year = {2022},
+	month = {11},
+	date = {2022-11},
+	journal = {Proceedings of the National Academy of Sciences},
+	pages = {e2203150119},
+	volume = {119},
+	number = {44},
+	doi = {10.1073/pnas.2203150119},
+	url = {https://www.pnas.org/doi/10.1073/pnas.2203150119},
+	note = {Publisher: Proceedings of the National Academy of Sciences}
+}
+
+@article{simmons2011,
+	title = {False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant},
+	author = {Simmons, Joseph P. and Nelson, Leif D. and Simonsohn, Uri},
+	year = {2011},
+	month = {11},
+	date = {2011-11},
+	journal = {Psychological Science},
+	pages = {1359--1366},
+	volume = {22},
+	number = {11},
+	doi = {10.1177/0956797611417632},
+	url = {http://journals.sagepub.com/doi/10.1177/0956797611417632},
+	langid = {en}
+}
+
+@article{gelman2014,
+	title = {The Statistical Crisis in Science},
+	author = {Gelman, Andrew and Loken, Eric},
+	year = {2014},
+	date = {2014},
+	journal = {American Scientist},
+	pages = {460},
+	volume = {102},
+	number = {6},
+	note = {Publisher: Sigma XI-The Scientific Research Society}
+}
+
+@book{vanrossum2009,
+	title = {Python 3 Reference Manual},
+	author = {Van Rossum, Guido and Drake, Fred L.},
+	year = {2009},
+	date = {2009},
+	publisher = {CreateSpace},
+	address = {Scotts Valley, CA}
+}
+
+@book{pipenvmaintainerteam2017,
+	title = {pipenv: Python Development Workflow for Humans.},
+	author = {Pipenv Maintainer Team },
+	year = {2017},
+	date = {2017},
+	url = {https://github.com/pypa/pipenv}
+}
+
+@article{pedregosa2011,
+	title = {Scikit-learn: Machine Learning in Python},
+	author = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V. and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P. and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+	year = {2011},
+	date = {2011},
+	journal = {Journal of Machine Learning Research},
+	pages = {2825{\textendash}2830},
+	volume = {12}
+}
+
+@book{team2020,
+	title = {pandas-dev/pandas: Pandas},
+	author = {team, The pandas development},
+	year = {2020},
+	month = {02},
+	date = {2020-02},
+	publisher = {Zenodo},
+	doi = {10.5281/zenodo.3509134},
+	url = {https://doi.org/10.5281/zenodo.3509134},
+	note = {DOI: 10.5281/zenodo.3509134}
+}
+
+@book{contributors2017,
+	title = {papermill: Parametrize and run Jupyter and nteract Notebooks},
+	author = {contributors, nteract},
+	year = {2017},
+	date = {2017},
+	url = {https://github.com/nteract/papermill}
+}
+
+@book{rcoreteam2022,
+	title = {R: A Language and Environment for Statistical Computing},
+	author = {R Core Team },
+	year = {2022},
+	date = {2022},
+	publisher = {R Foundation for Statistical Computing},
+	url = {https://www.R-project.org/},
+	address = {Vienna, Austria}
+}
+
+@book{allaire2022,
+	title = {Quarto},
+	author = {Allaire, J.J. and Teague, Charles and Scheidegger, Carlos and Xie, Yihui and Dervieux, Christophe},
+	year = {2022},
+	month = {01},
+	date = {2022-01},
+	doi = {10.5281/zenodo.5960048},
+	url = {https://github.com/quarto-dev/quarto-cli},
+	note = {DOI: 10.5281/zenodo.5960048}
+}
+
+@misc{wickham2019,
+	title = {Welcome to the Tidyverse},
+	author = {Wickham, Hadley and Averick, Mara and Bryan, Jennifer and Chang, Winston and McGowan, Lucy and {François}, Romain and Grolemund, Garrett and Hayes, Alex and Henry, Lionel and Hester, Jim and Kuhn, Max and Pedersen, Thomas and Miller, Evan and Bache, Stephan and {Müller}, Kirill and Ooms, Jeroen and Robinson, David and Seidel, Dana and Spinu, Vitalie and Takahashi, Kohske and Vaughan, Davis and Wilke, Claus and Woo, Kara and Yutani, Hiroaki},
+	year = {2019},
+	month = {11},
+	date = {2019-11-21},
+	url = {https://joss.theoj.org},
+	note = {DOI: 10.21105/joss.01686},
+	langid = {en}
+}
+
+@book{kassambara2023,
+	title = {ggpubr: 'ggplot2' Based Publication Ready Plots},
+	author = {Kassambara, Alboukadel},
+	year = {2023},
+	month = {02},
+	date = {2023-02-10},
+	url = {https://CRAN.R-project.org/package=ggpubr}
+}
+
+@inbook{feurer2019,
+	title = {Hyperparameter Optimization},
+	author = {Feurer, Matthias and Hutter, Frank},
+	editor = {Hutter, Frank and Kotthoff, Lars and Vanschoren, Joaquin},
+	year = {2019},
+	date = {2019},
+	publisher = {Springer International Publishing},
+	pages = {3--33},
+	series = {The Springer Series on Challenges in Machine Learning},
+	doi = {10.1007/978-3-030-05318-5_1},
+	url = {https://doi.org/10.1007/978-3-030-05318-5_1},
+	note = {DOI: 10.1007/978-3-030-05318-5{\_}1},
+	address = {Cham},
+	langid = {en}
+}
+
+@article{bischl2023,
+	title = {Hyperparameter optimization: Foundations, algorithms, best practices, and open challenges},
+	author = {Bischl, Bernd and Binder, Martin and Lang, Michel and Pielok, Tobias and Richter, Jakob and Coors, Stefan and Thomas, Janek and Ullmann, Theresa and Becker, Marc and Boulesteix, {Anne{-}Laure} and Deng, Difan and Lindauer, Marius},
+	year = {2023},
+	month = {03},
+	date = {2023-03},
+	journal = {WIREs Data Mining and Knowledge Discovery},
+	volume = {13},
+	number = {2},
+	doi = {10.1002/widm.1484},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/widm.1484},
+	langid = {en}
+}
+
+@article{mukerjee2002,
+	title = {Multi{\textendash}objective Evolutionary Algorithms for the Risk{\textendash}return Trade{\textendash}off in Bank Loan Management},
+	author = {Mukerjee, Amitabha and Biswas, Rita and Deb, Kalyanmoy and Mathur, Amrit P.},
+	year = {2002},
+	date = {2002},
+	journal = {International Transactions in Operational Research},
+	pages = {583--597},
+	volume = {9},
+	number = {5},
+	doi = {10.1111/1475-3995.00375},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/1475-3995.00375},
+	note = {{\_}eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/1475-3995.00375},
+	langid = {en}
+}
+
+@article{faliagka2012,
+	title = {Application of Machine Learning Algorithms to an online Recruitment System},
+	author = {Faliagka, Evanthia and Ramantas, Kostas and Tzimas, Giannis},
+	year = {2012},
+	date = {2012},
+	langid = {en}
+}
+
+@article{angwin2016,
+	title = {Machine bias},
+	author = {Angwin, Julia and Larson, Jeff and Mattu, Surya and Kirchner, Lauren},
+	year = {2016},
+	month = {05},
+	date = {2016-05-23},
+	journal = {ProPublica},
+	pages = {254{\textendash}264},
+	url = {https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing}
+}
+
+@article{mehrabi2021,
+	title = {A Survey on Bias and Fairness in Machine Learning},
+	author = {Mehrabi, Ninareh and Morstatter, Fred and Saxena, Nripsuta and Lerman, Kristina and Galstyan, Aram},
+	year = {2021},
+	month = {07},
+	date = {2021-07-13},
+	journal = {ACM Computing Surveys},
+	pages = {115:1{\textendash}115:35},
+	volume = {54},
+	number = {6},
+	doi = {10.1145/3457607},
+	url = {https://doi.org/10.1145/3457607}
+}
+
+@article{henriques-gomes2023,
+	title = {Robodebt: five years of lies, mistakes and failures that caused a {\$}1.8bn scandal},
+	author = {Henriques-Gomes, Luke},
+	year = {2023},
+	month = {03},
+	date = {2023-03-10},
+	journal = {The Guardian},
+	url = {https://www.theguardian.com/australia-news/2023/mar/11/robodebt-five-years-of-lies-mistakes-and-failures-that-caused-a-18bn-scandal},
+	langid = {australian}
+}
+
+@book{kuhn2020,
+	title = {Feature engineering and selection: a practical approach for predictive models},
+	author = {Kuhn, Max and Johnson, Kjell},
+	year = {2020},
+	date = {2020},
+	publisher = {CRC Press, Taylor \& Francis Group},
+	series = {Chapman \& Hall/CRC data science series},
+	url = {www.feat.engineering},
+	address = {Boca Raton London New York},
+	langid = {eng}
+}
+
+@article{lequy2022,
+	title = {A survey on datasets for fairness-aware machine learning},
+	author = {Le Quy, Tai and Roy, Arjun and Iosifidis, Vasileios and Zhang, Wenbin and Ntoutsi, Eirini},
+	year = {2022},
+	date = {2022},
+	journal = {WIREs Data Mining and Knowledge Discovery},
+	pages = {e1452},
+	volume = {12},
+	number = {3},
+	doi = {10.1002/widm.1452},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/widm.1452},
+	note = {{\_}eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/widm.1452},
+	langid = {en}
+}
+
+@article{agrawal,
+	title = {Debiasing classifiers: is reality at variance with expectation?},
+	year = {2021},
+	author = {Agrawal, Ashrya and Pfisterer, Florian and Bischl, Bernd and Buet-Golfouse, Francois and Sood, Srijan and Chen, Jiahao and Shah, Sameena and Vollmer, Sebastian},
+	doi = {10.48550/arXiv.2011.02407}
+}
+
+@article{weerts,
+	title = {An Introduction to Algorithmic Fairness},
+	author = {Weerts, Hilde J. P.},
+	year = {2021},
+	doi = {10.48550/arXiv.2105.05595}
+}
+
+@inproceedings{perrone2021,
+	title = {AIES '21: AAAI/ACM Conference on AI, Ethics, and Society},
+	author = {Perrone, Valerio and Donini, Michele and Zafar, Muhammad Bilal and Schmucker, Robin and Kenthapadi, Krishnaram and Archambeau, {Cédric}},
+	year = {2021},
+	month = {07},
+	date = {2021-07-21},
+	publisher = {ACM},
+	pages = {854--863},
+	doi = {10.1145/3461702.3462629},
+	url = {https://dl.acm.org/doi/10.1145/3461702.3462629},
+	address = {Virtual Event USA},
+	langid = {en}
+}
+
+@article{kohavi1996,
+	title = {Adult data set},
+	author = {Kohavi, Ronny and Becker, Barry},
+	year = {1996},
+	date = {1996},
+	journal = {UCI machine learning repository},
+	pages = {2093},
+	volume = {5}
+}
+
+@article{hardt,
+	title = {Equality of Opportunity in Supervised Learning},
+	author = {Hardt, Moritz and Price, Eric and Price, Eric and Srebro, Nati},
+	year = {2016},
+	date = {2016},
+	langid = {en}
+}
+
+@article{obermeyer2019,
+	title = {Dissecting racial bias in an algorithm used to manage the health of populations},
+	author = {Obermeyer, Ziad and Powers, Brian and Vogeli, Christine and Mullainathan, Sendhil},
+	year = {2019},
+	month = {10},
+	date = {2019-10-25},
+	journal = {Science},
+	pages = {447--453},
+	volume = {366},
+	number = {6464},
+	doi = {10.1126/science.aax2342},
+	url = {https://www.science.org/doi/10.1126/science.aax2342},
+	note = {Publisher: American Association for the Advancement of Science}
+}
+
+@article{black2022,
+	title = {Model Multiplicity: Opportunities, Concerns, and Solutions},
+	author = {Black, Emily and Raghavan, Manish and Barocas, Solon},
+	year = {2022},
+	date = {2022},
+	langid = {en}
+}
+
+@article{cox1958,
+	title = {The regression analysis of binary sequences},
+	author = {Cox, David R},
+	year = {1958},
+	date = {1958},
+	journal = {Journal of the Royal Statistical Society: Series B (Methodological)},
+	pages = {215{\textendash}232},
+	volume = {20},
+	number = {2},
+	note = {Publisher: Wiley Online Library}
+}
+
+@inproceedings{ho1995,
+	title = {Random decision forests},
+	author = {Ho, Tin Kam},
+	year = {1995},
+	date = {1995},
+	publisher = {IEEE},
+	pages = {278{\textendash}282},
+	volume = {1}
+}
+
+@article{friedman2001,
+	title = {Greedy function approximation: A gradient boosting machine.},
+	author = {Friedman, Jerome H.},
+	year = {2001},
+	month = {10},
+	date = {2001-10},
+	journal = {The Annals of Statistics},
+	pages = {1189--1232},
+	volume = {29},
+	number = {5},
+	doi = {10.1214/aos/1013203451},
+	url = {https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-5/Greedy-function-approximation-A-gradient-boosting-machine/10.1214/aos/1013203451.full},
+	note = {Publisher: Institute of Mathematical Statistics}
+}
+
+@article{zou2005,
+	title = {Regularization and Variable Selection via the Elastic Net},
+	author = {Zou, Hui and Hastie, Trevor},
+	year = {2005},
+	date = {2005},
+	journal = {Journal of the Royal Statistical Society. Series B (Statistical Methodology)},
+	pages = {301--320},
+	volume = {67},
+	number = {2},
+	url = {https://www.jstor.org/stable/3647580},
+	note = {Publisher: [Royal Statistical Society, Wiley]}
+}
+
+@inproceedings{islam2021,
+	title = {AIES '21: AAAI/ACM Conference on AI, Ethics, and Society},
+	author = {Islam, Rashidul and Pan, Shimei and Foulds, James R.},
+	year = {2021},
+	month = {07},
+	date = {2021-07-21},
+	publisher = {ACM},
+	pages = {586--596},
+	doi = {10.1145/3461702.3462614},
+	url = {https://dl.acm.org/doi/10.1145/3461702.3462614},
+	address = {Virtual Event USA},
+	langid = {en}
+}
+
+
+@inproceedings{aivodji2019fairwashing,
+  title={Fairwashing: the risk of rationalization},
+  author={A{\"\i}vodji, Ulrich and Arai, Hiromi and Fortineau, Olivier and Gambs, S{\'e}bastien and Hara, Satoshi and Tapp, Alain},
+  booktitle={International Conference on Machine Learning},
+  pages={161--170},
+  year={2019},
+  organization={PMLR}
+}
+
+@article{meding2024fairness,
+  title = {Fairness {{Hacking}}: {{The Malicious Practice}} of {{Shrouding Unfairness}} in {{Algorithms}}},
+  shorttitle = {Fairness {{Hacking}}},
+  author = {Meding, Kristof and Hagendorff, Thilo},
+  year = {2024},
+  month = jan,
+  journal = {Philosophy \& Technology},
+  volume = {37},
+  number = {1},
+  pages = {4},
+  issn = {2210-5441},
+  doi = {10.1007/s13347-023-00679-8},
+  urldate = {2024-01-16},
+  abstract = {Fairness in machine learning (ML) is an ever-growing field of research due to the manifold potential for harm from algorithmic discrimination. To prevent such harm, a large body of literature develops new approaches to quantify fairness. Here, we investigate how one can divert the quantification of fairness by describing a practice we call ``fairness hacking'' for the purpose of shrouding unfairness in algorithms. This impacts end-users who rely on learning algorithms, as well as the broader community interested in fair AI practices. We introduce two different categories of fairness hacking in reference to the established concept of p-hacking. The first category, intra-metric fairness hacking, describes the misuse of a particular metric by adding or removing sensitive attributes from the analysis. In this context, countermeasures that have been developed to prevent or reduce p-hacking can be applied to similarly prevent or reduce fairness hacking. The second category of fairness hacking is inter-metric fairness hacking. Inter-metric fairness hacking is the search for a specific fair metric with given attributes. We argue that countermeasures to prevent or reduce inter-metric fairness hacking are still in their infancy. Finally, we demonstrate both types of fairness hacking using real datasets. Our paper intends to serve as a guidance for discussions within the fair ML community to prevent or reduce the misuse of fairness metrics, and thus reduce overall harm from ML applications.},
+  langid = {english},
+  keywords = {AI ethics,Algorithmic bias,Fairness hacking,Fairness metrics,P-hacking},
+  file = {/Users/jan/Documents/Zotero-Bibliothek/storage/YKPWBIJJ/Meding and Hagendorff - 2024 - Fairness Hacking The Malicious Practice of Shroud.pdf}
+}
+
+
+@misc{us2021understanding,
+  title={Understanding and using the American Community Survey public use microdata sample files: What data users need to know},
+  author={US Census Bureau},
+  year={2021},
+  publisher={Washington DC, USA: US Government Printing Office}
+}
+
+@incollection{barocas2023classification,
+  title = {Classification - {{No}} Fairness through Unawareness},
+  booktitle = {Fairness and Machine Learning: Limitations and Opportunities},
+  author = {Barocas, Solon and Hardt, Moritz and Narayanan, Arvind},
+  year = {2023},
+  publisher = {{The MIT Press}},
+  address = {{Cambridge, Massachusetts}},
+  isbn = {978-0-262-04861-3},
+  langid = {english}
+}
+
+@article{simonsohn2014pcurve,
+  title = {P-Curve: {{A}} Key to the File-Drawer},
+  shorttitle = {P-Curve},
+  author = {Simonsohn, Uri and Nelson, Leif D. and Simmons, Joseph P.},
+  year = {2014},
+  journal = {Journal of Experimental Psychology: General},
+  volume = {143},
+  number = {2},
+  pages = {534--547},
+  publisher = {{American Psychological Association}},
+  address = {{US}},
+  issn = {1939-2222},
+  doi = {10.1037/a0033242},
+  abstract = {Because scientists tend to report only studies (publication bias) or analyses (p-hacking) that ``work,'' readers must ask, ``Are these effects true, or do they merely reflect selective reporting?'' We introduce p-curve as a way to answer this question. P-curve is the distribution of statistically significant p values for a set of studies (ps p-curves{\textemdash}containing more low (.01s) than high (.04s) significant p values{\textemdash}only right-skewed p-curves are diagnostic of evidential value. By telling us whether we can rule out selective reporting as the sole explanation for a set of findings, p-curve offers a solution to the age-old inferential problems caused by file-drawers of failed studies and analyses. (PsycInfo Database Record (c) 2023 APA, all rights reserved)},
+  keywords = {Hypothesis Testing,Psychology,Publication Bias,Scientific Communication,Statistics},
+  file = {/Users/jan/Documents/Zotero-Bibliothek/storage/N2QZVRT2/Simonsohn et al. - P-Curve A Key to the File-Drawer.pdf;/Users/jan/Documents/Zotero-Bibliothek/storage/H7EMQQXD/2013-25331-001.html}
+}
+
+@inproceedings{septiandri2023weird,
+  author       = {Ali Akbar Septiandri and
+                  Marios Constantinides and
+                  Mohammad Tahaei and
+                  Daniele Quercia},
+  title        = {{WEIRD} FAccTs: How Western, Educated, Industrialized, Rich, and Democratic
+                  is FAccT?},
+  booktitle    = {Proceedings of the 2023 {ACM} Conference on Fairness, Accountability,
+                  and Transparency, FAccT 2023, Chicago, IL, USA, June 12-15, 2023},
+  pages        = {160--171},
+  publisher    = {{ACM}},
+  year         = {2023},
+  url          = {https://doi.org/10.1145/3593013.3593985},
+  doi          = {10.1145/3593013.3593985},
+  timestamp    = {Thu, 15 Jun 2023 21:56:58 +0200},
+  biburl       = {https://dblp.org/rec/conf/fat/SeptiandriCTQ23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{pfisterer-arxiv19a,
+	author = {F. Pfisterer and S. Coors and J. Thomas and B. Bischl},
+	year = {2019},
+	title = {Multi-Objective Automatic Machine Learning with AutoxgboostMC},
+	journal = {arXiv},   volume={1908.10796 {[stat.ML]}},
+}
+
+@inproceedings{friedler2019comparative,
+  title={A comparative study of fairness-enhancing interventions in machine learning},
+  author={Friedler, Sorelle A and Scheidegger, Carlos and Venkatasubramanian, Suresh and Choudhary, Sonam and Hamilton, Evan P and Roth, Derek},
+  booktitle={Proceedings of the conference on fairness, accountability, and transparency},
+  pages={329--338},
+  year={2019}
+}
+
+@article{cooper2024arbitrariness,
+  title = {Arbitrariness and {{Social Prediction}}: {{The Confounding Role}} of {{Variance}} in {{Fair Classification}}},
+  shorttitle = {Arbitrariness and {{Social Prediction}}},
+  author = {Cooper, A. Feder and Lee, Katherine and Choksi, Madiha Zahrah and Barocas, Solon and De Sa, Christopher and Grimmelmann, James and Kleinberg, Jon and Sen, Siddhartha and Zhang, Baobao},
+  year = {2024},
+  month = mar,
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {38},
+  number = {20},
+  pages = {22004--22012},
+  issn = {2374-3468, 2159-5399},
+  doi = {10.1609/aaai.v38i20.30203},
+  urldate = {2024-04-10},
+  langid = {english}
+}
+
+
+@inproceedings{meyer2023dataset,
+  title = {The {{Dataset Multiplicity Problem}}: {{How Unreliable Data Impacts Predictions}}},
+  shorttitle = {The {{Dataset Multiplicity Problem}}},
+  booktitle = {Proceedings of the 2023 {{ACM Conference}} on {{Fairness}}, {{Accountability}}, and {{Transparency}}},
+  author = {Meyer, Anna P. and Albarghouthi, Aws and D'Antoni, Loris},
+  year = {2023},
+  month = jun,
+  series = {{{FAccT}} '23},
+  pages = {193--204},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3593013.3593988},
+  urldate = {2024-04-10},
+  isbn = {9798400701924},
+  keywords = {data bias,Dataset multiplicity,model multiplicity,model robustness,procedural fairness}
+}
+
+@inproceedings{watson-daniels2023multitarget,
+  title = {Multi-{{Target Multiplicity}}: {{Flexibility}} and {{Fairness}} in {{Target Specification}} under {{Resource Constraints}}},
+  shorttitle = {Multi-{{Target Multiplicity}}},
+  booktitle = {Proceedings of the 2023 {{ACM Conference}} on {{Fairness}}, {{Accountability}}, and {{Transparency}}},
+  author = {{Watson-Daniels}, Jamelle and Barocas, Solon and Hofman, Jake M. and Chouldechova, Alexandra},
+  year = {2023},
+  month = jun,
+  series = {{{FAccT}} '23},
+  pages = {297--311},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3593013.3593998},
+  urldate = {2024-04-10},
+  isbn = {9798400701924},
+  keywords = {fairness,multiplicity,predictive inconsistency,target specification}
+}
+@article{snoek2012practical,
+  title={Practical bayesian optimization of machine learning algorithms},
+  author={Snoek, Jasper and Larochelle, Hugo and Adams, Ryan P},
+  journal={Advances in neural information processing systems},
+  volume={25},
+  year={2012}
+}

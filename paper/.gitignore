@@ -1,0 +1,14 @@
+/.quarto/
+
+# Rendered output
+*.pdf
+/*.tex
+
+# Don't ignore custom figures
+!/figures/*.pdf
+
+# Don't ignore data for the paper
+!/data
+
+*_cache/
+*.cut
