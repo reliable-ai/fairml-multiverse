@@ -10,9 +10,9 @@ header: |
 
 ## An Interactive Analysis of the Machine Learning Multiverse
 
-This document is an interactive companion article illustrating a subset of the results from the paper "[One Model Many Scores: Preventing Fairness Hacking and Evaluating the Influence of Model Design Decisions](https://arxiv.org/abs/2308.16681)" by Jan Simson, Florian Pfisterer and Christoph Kern to be presented at the *ACM Conference on Fairness, Accountability, and Transparency 2024* in Rio de Janeiro, Brazil in June 2024.
+This document is an interactive companion article illustrating a subset of the results from the paper "[One Model Many Scores: Preventing Fairness Hacking and Evaluating the Influence of Model Design Decisions](https://doi.org/10.1145/3630106.3658974)" by Jan Simson, Florian Pfisterer and Christoph Kern published at the *ACM Conference on Fairness, Accountability, and Transparency 2024* in Rio de Janeiro, Brazil in June 2024.
 
-A preprint of the paper is available at [arxiv.org/abs/2308.16681](https://arxiv.org/abs/2308.16681), the source code of the analyses as well as this interactive document is available at [github.com/reliable-ai/fairml-multiverse](https://github.com/reliable-ai/fairml-multiverse).
+The source code of the analyses as well as this interactive document is available at [github.com/reliable-ai/fairml-multiverse](https://github.com/reliable-ai/fairml-multiverse). If you are interested in the creation process of this interactive analysis, there is an [article](https://nightingaledvs.com/interactive-data-diaries-machine-learning-visualization/) about it in *Nightingale*.
 
 <div class="grid grid-cols-2">
 
@@ -20,15 +20,17 @@ A preprint of the paper is available at [arxiv.org/abs/2308.16681](https://arxiv
 
 # Introduction
 
-We try to keep the introduction here short and refer to the [paper](https://arxiv.org/abs/2308.16681) for a proper introduction into the topic and case study used to generate the present results.
+We try to keep the introduction here short and refer to the [paper](https://doi.org/10.1145/3630106.3658974) for a proper introduction into the topic and case study used to generate the present results.
 
 The basic idea of a multiverse analysis is to *turn implicit decisions into explicit ones*, traversing the garden of forking paths one encounters when conducting an analysis or building a machine learning system.
 
 By systematically combining many decision options, we can evaluate the influence of these decisions on a certain outcome, in our case the performance and fairness of a machine learning model.
 
-For this analysis we combined 9 potential design decisions and 3 evaluation decisions (see [Table 1](https://arxiv.org/html/2308.16681v2#S2.T1) in the full paper for an overview). By combining these decisions we generate a multiverse with 61440 different system designs / models and 28 evaluation strategies per model. Altogether, this results in **1,720,320 universes 🪐** of how a person may design and evaluate this particular system.
+For this analysis we combined 9 potential design decisions and 3 evaluation decisions (see [Table 1](https://dl.acm.org/doi/fullHtml/10.1145/3630106.3658974#tab1) in the full paper for an overview). By combining these decisions we generate a multiverse with 61440 different system designs / models and 28 evaluation strategies per model. Altogether, this results in **1,720,320 universes 🪐** of how a person may design and evaluate this particular system.
 
-Please note, that just because we included certain decisions or settings in our analysis it does not mean we condone them. On the contrary, we strongly advice against applying some of these practices and only include them to raise awareness of their potential harm (see [Section 2.2.1](https://arxiv.org/html/2308.16681v2#S2.SS2.SSS1)).
+Please note, that just because we included certain decisions or settings in our analysis it does not mean we condone them. On the contrary, we strongly advice against applying some of these practices and only include them to raise awareness of their potential harm (see [Section 2.2.1](https://dl.acm.org/doi/fullHtml/10.1145/3630106.3658974#sec-10)).
+
+Especially decisions related to the evaluation of a machine learning model also pose the risk of potentially hacking a fairness metric, a concept introduced in [Meding & Hagendorff (2024)](https://link.springer.com/article/10.1007/s13347-023-00679-8).
 
 </div>
 
@@ -345,7 +347,7 @@ ul.innerHTML = universeInfo
 ul
 ```
 
-If you are curious what exactly each decision and its setting refer to, check out [Section 2.2.1](https://arxiv.org/html/2308.16681v2#S2.SS2.SSS1) in the full paper, which contains detailed explanations.
+If you are curious what exactly each decision and its setting refer to, check out [Section 2.2.1](https://dl.acm.org/doi/fullHtml/10.1145/3630106.3658974#sec-10) in the full paper, which contains detailed explanations.
 
 </div>
 
@@ -370,7 +372,7 @@ vg.hconcat(
 
 We hope this interactive analysis gave you an idea of how much design and evaluation choices can affect a models metrics.
 
-If this analysis sparked your interest, we recommend to check out the [full paper](https://arxiv.org/abs/2308.16681) which contains further analysis. In there, we demonstrate how to determine which decisions or decision combinations influence a metric the most and how one can examine just *1%* of the multiverse and still discover the most important decisions.
+If this analysis sparked your interest, we recommend to check out the [full paper](https://doi.org/10.1145/3630106.3658974) which contains further analysis. In there, we demonstrate how to determine which decisions or decision combinations influence a metric the most and how one can examine just *1%* of the multiverse and still discover the most important decisions.
 
 # Technical Details
 
