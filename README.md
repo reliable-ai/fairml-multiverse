@@ -1,5 +1,3 @@
-[![arXiv](https://img.shields.io/badge/arXiv-2308.16681-b31b1b.svg)](https://arxiv.org/abs/2308.16681)
-
 # Multiverse Analysis for Algorithmic Fairness
 
 This repository contains the code and data for the paper [One Model Many Scores: Using Multiverse Analysis to Prevent Fairness Hacking and Evaluate the Influence of Model Design Decisions](https://doi.org/10.1145/3630106.3658974) by Jan Simson, Florian Pfisterer and Christoph Kern, published in the proceedings of the *ACM Conference on Fairness, Accountability, and Transparency 2024* in Rio de Janeiro, Brazil in June 2024.
