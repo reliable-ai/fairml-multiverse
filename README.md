@@ -12,6 +12,9 @@ To study this issue, we draw on insights from the field of psychology and introd
 
 ## Running the Code
 
+> [!TIP]
+> If you are planning to run your own multiverse analysis, I recommend checking out [`multiversum`](https://github.com/jansim/multiversum), a Python package drawing on lessons from this paper and designed to easily allow running multiverse analyses in Python.
+
 ### Setup
 
 This project uses [Pipenv](https://pipenv.pypa.io/en/latest/) to control the Python environment. To install the dependencies, first install `pipenv` on your machine, then run `pipenv sync -d` in the root directory of the project. Once set up, you can enter the virtual environment in your command line by running `pipenv shell`.
