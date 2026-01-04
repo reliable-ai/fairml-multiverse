@@ -17,7 +17,9 @@ To study this issue, we draw on insights from the field of psychology and introd
 
 ### Setup
 
-This project uses [Pipenv](https://pipenv.pypa.io/en/latest/) to control the Python environment. To install the dependencies, first install `pipenv` on your machine, then run `pipenv sync -d` in the root directory of the project. Once set up, you can enter the virtual environment in your command line by running `pipenv shell`.
+This project uses [Pipenv](https://pipenv.pypa.io/en/latest/) to control the Python environment. To install the dependencies, first install `pipenv` on your machine, then run `pipenv sync -d` in the root directory of the project. Once set up, you can enter the virtual environment in your command line by running `pipenv shell`.  
+
+A script installing `pipenv` at the user level or in the root of this repo which also automatically fetches a version of `Python 3.8` and initializes the `pyenv` in the repo root is provided in [setup_pyenv_3_8.sh](./setup_pyenv_3_8.sh). Run it from the project root. You will still need to install `pipenv` and run the `pipenv sync -d` command.
 
 You can check whether the environment is correctly set up by activating the virtual environment (`pipenv shell`) and running the test cases via `python -m unittest`. This should output the number of tests that were run (these should be more than 0!) and a message that all tests passed (OK).
 
